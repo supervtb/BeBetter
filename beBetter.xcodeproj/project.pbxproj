@@ -22,6 +22,14 @@
 		0F704E4E270F9EEE004B897F /* UINavigationItem+EmptyBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E4D270F9EEE004B897F /* UINavigationItem+EmptyBack.swift */; };
 		0F704E50270F9F48004B897F /* UIColor+SemanticAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E4F270F9F48004B897F /* UIColor+SemanticAssets.swift */; };
 		0F704E52270F9FF9004B897F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F704E51270F9FF9004B897F /* Colors.xcassets */; };
+		0F704E56270FA3AA004B897F /* KeyboardAwareCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E55270FA3A9004B897F /* KeyboardAwareCollectionView.swift */; };
+		0F704E58270FA3D1004B897F /* KeyboardAwareScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E57270FA3D1004B897F /* KeyboardAwareScrollView.swift */; };
+		0F704E5A270FA3ED004B897F /* KeyboardAwareTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E59270FA3ED004B897F /* KeyboardAwareTableView.swift */; };
+		0F704E5C270FA3FF004B897F /* UIScrollView+KeyboardAwareness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E5B270FA3FF004B897F /* UIScrollView+KeyboardAwareness.swift */; };
+		0F704E5E270FA41A004B897F /* KeyboardAwareScrollContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E5D270FA41A004B897F /* KeyboardAwareScrollContainerView.swift */; };
+		0F704E61270FA4B0004B897F /* FloatingLabelField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E60270FA4B0004B897F /* FloatingLabelField.swift */; };
+		0F704E63270FA4D3004B897F /* UITextField+CaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E62270FA4D3004B897F /* UITextField+CaretPosition.swift */; };
+		0F704E65270FA4F4004B897F /* BeBetterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E64270FA4F4004B897F /* BeBetterTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +69,14 @@
 		0F704E4D270F9EEE004B897F /* UINavigationItem+EmptyBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+EmptyBack.swift"; sourceTree = "<group>"; };
 		0F704E4F270F9F48004B897F /* UIColor+SemanticAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+SemanticAssets.swift"; sourceTree = "<group>"; };
 		0F704E51270F9FF9004B897F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		0F704E55270FA3A9004B897F /* KeyboardAwareCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAwareCollectionView.swift; sourceTree = "<group>"; };
+		0F704E57270FA3D1004B897F /* KeyboardAwareScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAwareScrollView.swift; sourceTree = "<group>"; };
+		0F704E59270FA3ED004B897F /* KeyboardAwareTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAwareTableView.swift; sourceTree = "<group>"; };
+		0F704E5B270FA3FF004B897F /* UIScrollView+KeyboardAwareness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+KeyboardAwareness.swift"; sourceTree = "<group>"; };
+		0F704E5D270FA41A004B897F /* KeyboardAwareScrollContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAwareScrollContainerView.swift; sourceTree = "<group>"; };
+		0F704E60270FA4B0004B897F /* FloatingLabelField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingLabelField.swift; sourceTree = "<group>"; };
+		0F704E62270FA4D3004B897F /* UITextField+CaretPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+CaretPosition.swift"; sourceTree = "<group>"; };
+		0F704E64270FA4F4004B897F /* BeBetterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeBetterTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +127,7 @@
 		0F704E09270F9D08004B897F /* beBetter */ = {
 			isa = PBXGroup;
 			children = (
+				0F704E53270FA38A004B897F /* Components */,
 				0F704E3D270F9E05004B897F /* Utils */,
 				0F704E3C270F9DB7004B897F /* DepenndencyContainer */,
 				0F704E3B270F9D7A004B897F /* App */,
@@ -207,6 +224,37 @@
 				0F704E4F270F9F48004B897F /* UIColor+SemanticAssets.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		0F704E53270FA38A004B897F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0F704E5F270FA4A2004B897F /* FloatingLabelField */,
+				0F704E54270FA398004B897F /* KeyboardAwareScrollViews */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0F704E54270FA398004B897F /* KeyboardAwareScrollViews */ = {
+			isa = PBXGroup;
+			children = (
+				0F704E5B270FA3FF004B897F /* UIScrollView+KeyboardAwareness.swift */,
+				0F704E55270FA3A9004B897F /* KeyboardAwareCollectionView.swift */,
+				0F704E57270FA3D1004B897F /* KeyboardAwareScrollView.swift */,
+				0F704E59270FA3ED004B897F /* KeyboardAwareTableView.swift */,
+				0F704E5D270FA41A004B897F /* KeyboardAwareScrollContainerView.swift */,
+			);
+			path = KeyboardAwareScrollViews;
+			sourceTree = "<group>";
+		};
+		0F704E5F270FA4A2004B897F /* FloatingLabelField */ = {
+			isa = PBXGroup;
+			children = (
+				0F704E60270FA4B0004B897F /* FloatingLabelField.swift */,
+				0F704E62270FA4D3004B897F /* UITextField+CaretPosition.swift */,
+				0F704E64270FA4F4004B897F /* BeBetterTextField.swift */,
+			);
+			path = FloatingLabelField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,15 +388,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F704E63270FA4D3004B897F /* UITextField+CaretPosition.swift in Sources */,
 				0F704E0B270F9D08004B897F /* AppDelegate.swift in Sources */,
 				0F704E4A270F9EBC004B897F /* UIEdgeInsets+Equal.swift in Sources */,
 				0F704E4C270F9ED1004B897F /* CALayer+SketchShadow.swift in Sources */,
+				0F704E5A270FA3ED004B897F /* KeyboardAwareTableView.swift in Sources */,
+				0F704E65270FA4F4004B897F /* BeBetterTextField.swift in Sources */,
 				0F704E44270F9E72004B897F /* TextSize.swift in Sources */,
+				0F704E56270FA3AA004B897F /* KeyboardAwareCollectionView.swift in Sources */,
 				0F704E48270F9EA6004B897F /* UIView+Anchors.swift in Sources */,
 				0F704E40270F9E38004B897F /* CustomLoadedController.swift in Sources */,
 				0F704E4E270F9EEE004B897F /* UINavigationItem+EmptyBack.swift in Sources */,
 				0F704E0D270F9D08004B897F /* SceneDelegate.swift in Sources */,
 				0F704E50270F9F48004B897F /* UIColor+SemanticAssets.swift in Sources */,
+				0F704E58270FA3D1004B897F /* KeyboardAwareScrollView.swift in Sources */,
+				0F704E61270FA4B0004B897F /* FloatingLabelField.swift in Sources */,
+				0F704E5C270FA3FF004B897F /* UIScrollView+KeyboardAwareness.swift in Sources */,
+				0F704E5E270FA41A004B897F /* KeyboardAwareScrollContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
