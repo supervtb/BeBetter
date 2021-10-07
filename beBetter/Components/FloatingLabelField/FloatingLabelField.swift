@@ -27,7 +27,8 @@ class FloatingLabelField: UIView {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = FontFamily.Gilroy.medium.font(size: 12)
+        // font
+        //label.font = FontFamily.Gilroy.medium.font(size: 12)
         return label
     }()
 
@@ -49,7 +50,7 @@ class FloatingLabelField: UIView {
         super.init(frame: .zero)
         addSubviewWithAnchorsToSuperView(stackView)
         layer.cornerRadius = 8
-        backgroundColor = Asset.totalyWhite.color
+        backgroundColor = UIColor.white
         [titleLabel, textField].forEach {
             stackView.addArrangedSubview($0)
         }
@@ -75,7 +76,7 @@ class FloatingLabelField: UIView {
 
     private func updateTitle() {
         titleLabel.text = errorMessage ?? title
-        titleLabel.textColor = errorMessage != nil ? Asset.grapefruit.color : Asset.pinkishGrey.color
+        titleLabel.textColor = errorMessage != nil ? UIColor.red : UIColor.systemPink
     }
 
     private func subscribeToEvents() {
