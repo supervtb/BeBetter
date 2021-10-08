@@ -71,6 +71,10 @@ final class LoginView: AuthorizationBaseView {
         return contentStack
     }
 
+    override func updateContent() {
+        titleLabel.text = "Login"
+    }
+
     private func setup() {
         backgroundColor = UIColor.white
     }

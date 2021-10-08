@@ -27,7 +27,7 @@ open class AuthorizationBaseView: KeyboardAwareScrollContainerView {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.black
-        label.text = "Login"
+        label.font = .systemFont(ofSize: 24)
         label.numberOfLines = 0
         label.textAlignment = .left
         return label
@@ -37,6 +37,7 @@ open class AuthorizationBaseView: KeyboardAwareScrollContainerView {
         super.init(frame: frame)
         setup()
         setupViews()
+        updateContent()
     }
 
     required public init?(coder: NSCoder) {
@@ -72,5 +73,7 @@ open class AuthorizationBaseView: KeyboardAwareScrollContainerView {
     func contentView() -> UIView {
         fatalError("Must be overriden in subclasses")
     }
+
+    func updateContent() {}
 }
 
