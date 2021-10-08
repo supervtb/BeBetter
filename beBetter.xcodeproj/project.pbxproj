@@ -35,6 +35,7 @@
 		0F704E70270FAF48004B897F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E6F270FAF48004B897F /* LoginViewController.swift */; };
 		0F704E72270FAF86004B897F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E71270FAF86004B897F /* LoginView.swift */; };
 		0F704E75270FC092004B897F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E74270FC092004B897F /* PrimaryButton.swift */; };
+		0F704E78270FC6A0004B897F /* AuthorizationBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E77270FC6A0004B897F /* AuthorizationBaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		0F704E6F270FAF48004B897F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0F704E71270FAF86004B897F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0F704E74270FC092004B897F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		0F704E77270FC6A0004B897F /* AuthorizationBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationBaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 		0F704E53270FA38A004B897F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0F704E76270FC698004B897F /* AuthorizationBaseView */,
 				0F704E73270FC082004B897F /* Buttons */,
 				0F704E5F270FA4A2004B897F /* FloatingLabelField */,
 				0F704E54270FA398004B897F /* KeyboardAwareScrollViews */,
@@ -318,6 +321,14 @@
 				0F704E74270FC092004B897F /* PrimaryButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		0F704E76270FC698004B897F /* AuthorizationBaseView */ = {
+			isa = PBXGroup;
+			children = (
+				0F704E77270FC6A0004B897F /* AuthorizationBaseView.swift */,
+			);
+			path = AuthorizationBaseView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +466,7 @@
 				0F704E0B270F9D08004B897F /* AppDelegate.swift in Sources */,
 				0F704E4A270F9EBC004B897F /* UIEdgeInsets+Equal.swift in Sources */,
 				0F704E4C270F9ED1004B897F /* CALayer+SketchShadow.swift in Sources */,
+				0F704E78270FC6A0004B897F /* AuthorizationBaseView.swift in Sources */,
 				0F704E5A270FA3ED004B897F /* KeyboardAwareTableView.swift in Sources */,
 				0F704E65270FA4F4004B897F /* BeBetterTextField.swift in Sources */,
 				0F704E44270F9E72004B897F /* TextSize.swift in Sources */,

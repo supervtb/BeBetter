@@ -1,12 +1,12 @@
 import UIKit
 
-final class LoginView: KeyboardAwareScrollContainerView {
+final class LoginView: AuthorizationBaseView {
 
     private var contentHeightConstraint: NSLayoutConstraint?
 
     var onLogin: (() -> Void)?
 
-    private let stackView: UIStackView = {
+    private let contentStack: UIStackView = {
         let vStack = UIStackView()
         vStack.isLayoutMarginsRelativeArrangement = true
         vStack.axis = .vertical
@@ -52,7 +52,6 @@ final class LoginView: KeyboardAwareScrollContainerView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
-        setupViews()
         setupActions()
     }
 
@@ -60,33 +59,20 @@ final class LoginView: KeyboardAwareScrollContainerView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setup() {
-        backgroundColor = UIColor.white
+    override func contentView() -> UIView {
+        [emailTextField, passwordTextField].forEach {
+            fieldsStack.addArrangedSubview($0)
+        }
+
+        [fieldsStack, loginButton, UIView()].forEach {
+            contentStack.addArrangedSubview($0)
+        }
+
+        return contentStack
     }
 
-    private func setupViews() {
-        stackView.layoutMargins = UIEdgeInsets.zero
-        scrollView.preservesSuperviewLayoutMargins = true
-        let constraints: [Constraint] = [
-            equal(\.topAnchor),
-            equal(\.bottomAnchor, priority: .defaultHigh),
-            equal(\.leadingAnchor, \.layoutMarginsGuide.leadingAnchor),
-            equal(\.trailingAnchor, \.layoutMarginsGuide.trailingAnchor, priority: .defaultHigh)
-        ]
-
-
-        fieldsStack.addArrangedSubview(emailTextField)
-        fieldsStack.addArrangedSubview(passwordTextField)
-
-
-        stackView.addArrangedSubview(fieldsStack)
-        stackView.addArrangedSubview(loginButton)
-        stackView.addArrangedSubview(UIView())
-
-        scrollView.addSubview(stackView, constraints: constraints)
-        contentHeightConstraint = stackView.heightAnchor.constraint(greaterThanOrEqualTo: layoutMarginsGuide.heightAnchor)
-        contentHeightConstraint?.isActive = true
-
+    private func setup() {
+        backgroundColor = UIColor.white
     }
 
     private func setupActions() {
