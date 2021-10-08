@@ -10,22 +10,8 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        self.window = window
-        // Temporary view controller needed in case flows aren't ready
-        // when root window appeared
-        // We should measure which viewControllers loaded slowly to remove this line
-        // Also unbalanced calls warning related to this.
-        let vc = UIViewController()
-        vc.view.backgroundColor = UIColor.red
-        window.rootViewController = vc
-        window.makeKeyAndVisible()
-        
         return true
     }
 

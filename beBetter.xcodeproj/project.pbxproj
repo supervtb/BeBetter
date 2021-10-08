@@ -30,6 +30,11 @@
 		0F704E61270FA4B0004B897F /* FloatingLabelField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E60270FA4B0004B897F /* FloatingLabelField.swift */; };
 		0F704E63270FA4D3004B897F /* UITextField+CaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E62270FA4D3004B897F /* UITextField+CaretPosition.swift */; };
 		0F704E65270FA4F4004B897F /* BeBetterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E64270FA4F4004B897F /* BeBetterTextField.swift */; };
+		0F704E6C270FAAD1004B897F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E6B270FAAD1004B897F /* Coordinator.swift */; };
+		0F704E6E270FAAF4004B897F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E6D270FAAF4004B897F /* MainCoordinator.swift */; };
+		0F704E70270FAF48004B897F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E6F270FAF48004B897F /* LoginViewController.swift */; };
+		0F704E72270FAF86004B897F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E71270FAF86004B897F /* LoginView.swift */; };
+		0F704E75270FC092004B897F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E74270FC092004B897F /* PrimaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +82,11 @@
 		0F704E60270FA4B0004B897F /* FloatingLabelField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingLabelField.swift; sourceTree = "<group>"; };
 		0F704E62270FA4D3004B897F /* UITextField+CaretPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+CaretPosition.swift"; sourceTree = "<group>"; };
 		0F704E64270FA4F4004B897F /* BeBetterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeBetterTextField.swift; sourceTree = "<group>"; };
+		0F704E6B270FAAD1004B897F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		0F704E6D270FAAF4004B897F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		0F704E6F270FAF48004B897F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0F704E71270FAF86004B897F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0F704E74270FC092004B897F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +137,8 @@
 		0F704E09270F9D08004B897F /* beBetter */ = {
 			isa = PBXGroup;
 			children = (
+				0F704E69270FAABA004B897F /* Navigation */,
+				0F704E66270FA814004B897F /* Scenes */,
 				0F704E53270FA38A004B897F /* Components */,
 				0F704E3D270F9E05004B897F /* Utils */,
 				0F704E3C270F9DB7004B897F /* DepenndencyContainer */,
@@ -229,6 +241,7 @@
 		0F704E53270FA38A004B897F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0F704E73270FC082004B897F /* Buttons */,
 				0F704E5F270FA4A2004B897F /* FloatingLabelField */,
 				0F704E54270FA398004B897F /* KeyboardAwareScrollViews */,
 			);
@@ -255,6 +268,56 @@
 				0F704E64270FA4F4004B897F /* BeBetterTextField.swift */,
 			);
 			path = FloatingLabelField;
+			sourceTree = "<group>";
+		};
+		0F704E66270FA814004B897F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0F704E67270FA81D004B897F /* Onboarding */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0F704E67270FA81D004B897F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				0F704E68270FA83D004B897F /* Login */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		0F704E68270FA83D004B897F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0F704E6F270FAF48004B897F /* LoginViewController.swift */,
+				0F704E71270FAF86004B897F /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0F704E69270FAABA004B897F /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0F704E6A270FAAC2004B897F /* Coordinator */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		0F704E6A270FAAC2004B897F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0F704E6B270FAAD1004B897F /* Coordinator.swift */,
+				0F704E6D270FAAF4004B897F /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		0F704E73270FC082004B897F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				0F704E74270FC092004B897F /* PrimaryButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,11 +459,16 @@
 				0F704E65270FA4F4004B897F /* BeBetterTextField.swift in Sources */,
 				0F704E44270F9E72004B897F /* TextSize.swift in Sources */,
 				0F704E56270FA3AA004B897F /* KeyboardAwareCollectionView.swift in Sources */,
+				0F704E70270FAF48004B897F /* LoginViewController.swift in Sources */,
+				0F704E6C270FAAD1004B897F /* Coordinator.swift in Sources */,
 				0F704E48270F9EA6004B897F /* UIView+Anchors.swift in Sources */,
 				0F704E40270F9E38004B897F /* CustomLoadedController.swift in Sources */,
+				0F704E75270FC092004B897F /* PrimaryButton.swift in Sources */,
 				0F704E4E270F9EEE004B897F /* UINavigationItem+EmptyBack.swift in Sources */,
 				0F704E0D270F9D08004B897F /* SceneDelegate.swift in Sources */,
 				0F704E50270F9F48004B897F /* UIColor+SemanticAssets.swift in Sources */,
+				0F704E72270FAF86004B897F /* LoginView.swift in Sources */,
+				0F704E6E270FAAF4004B897F /* MainCoordinator.swift in Sources */,
 				0F704E58270FA3D1004B897F /* KeyboardAwareScrollView.swift in Sources */,
 				0F704E61270FA4B0004B897F /* FloatingLabelField.swift in Sources */,
 				0F704E5C270FA3FF004B897F /* UIScrollView+KeyboardAwareness.swift in Sources */,
