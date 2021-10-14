@@ -16,7 +16,7 @@ final class HomeView: UIView {
 
     private func commonInit() {
         preservesSuperviewLayoutMargins = true
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor(.backgroundPrimary)
 
         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "HomeTableViewCell")
         tableView.allowsMultipleSelection = false

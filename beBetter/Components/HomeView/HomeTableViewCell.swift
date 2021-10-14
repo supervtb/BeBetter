@@ -6,7 +6,7 @@ class HomeTableViewCell: UITableViewCell {
 
     let cellView: UIView = {
         let view = UIView(frame: .zero)
-        view.backgroundColor = UIColor.systemMint
+        view.backgroundColor = UIColor(.primary)
         view.layer.cornerRadius = 8
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.applyDefaultContainerShadow()

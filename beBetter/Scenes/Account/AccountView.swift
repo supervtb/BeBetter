@@ -13,7 +13,7 @@ final class AccountView: UIView {
 
     private func commonInit() {
         preservesSuperviewLayoutMargins = true
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor(.backgroundPrimary)
     }
 }
 

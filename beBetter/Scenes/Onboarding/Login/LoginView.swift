@@ -76,7 +76,7 @@ final class LoginView: AuthorizationBaseView {
     }
 
     private func setup() {
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor(.backgroundPrimary)
     }
 
     private func setupActions() {

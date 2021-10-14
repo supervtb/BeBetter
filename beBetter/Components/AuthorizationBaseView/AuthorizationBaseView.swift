@@ -45,7 +45,7 @@ open class AuthorizationBaseView: KeyboardAwareScrollContainerView {
     }
 
     private func setup() {
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor(.backgroundPrimary)
     }
 
     private func setupViews() {
