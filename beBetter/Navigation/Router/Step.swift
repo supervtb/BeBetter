@@ -1,0 +1,3 @@
+enum Step {
+    case loggedOut
+}

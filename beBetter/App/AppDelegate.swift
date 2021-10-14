@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  beBetter
-//
-//  Created by Альберт Чубаков on 8.10.21.
-//
-
 import UIKit
 
 @main

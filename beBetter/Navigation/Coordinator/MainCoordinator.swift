@@ -1,18 +1,37 @@
 import UIKit
+import Combine
 
-class MainCoordinator: Coordinator {
+class MainCoordinator: BaseCoordinator<Void> {
 
-    var childCoordinators = [Coordinator]()
+    let window: UIWindow
 
-    var navigationController: UINavigationController
-
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    init(presenting navigationController: NavigationControllerReleaseHandler, in window: UIWindow) {
+        self.window = window
+        super.init(presenting: navigationController)
     }
 
-    func start() {
-        let vc = LoginViewController()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+    override func start() -> AnyPublisher<Void, Never> {
+
+        startSplash()
+
+        return Publishers.Never()
+            .eraseToAnyPublisher()
+    }
+
+    private func startSplash() {
+        let coordinator = LoginCoordinator(presenting: NavigationController())
+        setRoot(to: coordinator, into: window)
+            .sink { [unowned self] _ in
+                self.startTabBar()
+            }.store(in: &bag)
+    }
+
+    private func startTabBar() {
+        let coordinator = TabBarCoordinator(
+            presenting: NavigationController(), tabs: Tab.allCases)
+        setRoot(to: coordinator, into: window)
+            .sink { [unowned self] _ in
+                self.startSplash()
+            }.store(in: &bag)
     }
 }
