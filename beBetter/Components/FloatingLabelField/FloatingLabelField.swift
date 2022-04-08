@@ -50,7 +50,7 @@ class FloatingLabelField: UIView {
         super.init(frame: .zero)
         addSubviewWithAnchorsToSuperView(stackView)
         layer.cornerRadius = 8
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor(.backgroundPrimary)
         [titleLabel, textField].forEach {
             stackView.addArrangedSubview($0)
         }

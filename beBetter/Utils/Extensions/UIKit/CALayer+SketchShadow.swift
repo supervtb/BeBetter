@@ -25,7 +25,7 @@ extension CALayer {
     }
 
     func applyDefaultContainerShadow() {
-        applySketchShadow(color: UIColor(.backgroundPrimary),
+        applySketchShadow(color: UIColor.systemGray,
                           alpha: 0.5,
                           x: 0,
                           y: 0,
