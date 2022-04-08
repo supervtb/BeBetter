@@ -29,7 +29,7 @@ open class AuthorizationBaseView: KeyboardAwareScrollContainerView {
         label.textColor = UIColor.black
         label.font = .systemFont(ofSize: 24)
         label.numberOfLines = 0
-        label.textAlignment = .left
+        label.textAlignment = .center
         return label
     }()
 
