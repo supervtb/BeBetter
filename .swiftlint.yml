@@ -1,0 +1,53 @@
+# excluded paths
+excluded:
+  - Pods
+  - SafetyTests
+
+
+# optional rules added
+opt_in_rules:
+  - explicit_init
+  - overridden_super_call
+  - private_outlet
+  - operator_usage_whitespace
+  - closure_end_indentation
+  - first_where
+  - prohibited_super_call
+  - file_header
+  - closure_spacing
+  - contains_over_first_not_nil
+  - fatal_error_message
+  - literal_expression_end_indentation
+  - vertical_parameter_alignment_on_call
+
+
+# disabled rules
+disabled_rules:
+  - notification_center_detachment
+
+
+# options
+
+vertical_parameter_alignment_on_call: error
+
+file_length:
+  warning: 500
+  error: 1200
+
+line_length:
+  error: 160
+
+force_cast:
+  severity: warning
+
+vertical_whitespace:
+  max_empty_lines: 3
+
+identifier_name:
+  allowed_symbols: ["_"]
+  validates_start_with_lowercase: false
+  min_length:
+  warning: 1
+
+identifier_name:
+  allowed_symbols: "_"

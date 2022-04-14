@@ -102,7 +102,11 @@ open class BaseCoordinator<Result>: NSObject, Coordinator {
     }
 
     /// set source view controller of the coordinator as root view controller
-    public func setRoot<C: Coordinator, U>(to coordinator: C, into window: UIWindow, animated: Bool = true) -> AnyPublisher<U, Never> where U == C.CoordinationResult {
+    public func setRoot<C: Coordinator, U>(
+        to coordinator: C,
+        into window: UIWindow,
+        animated: Bool = true
+    ) -> AnyPublisher<U, Never> where U == C.CoordinationResult {
 
         let result = coordinate(to: coordinator)
 

@@ -16,7 +16,8 @@ public extension Publisher {
 }
 
 
-///  DemandableSubscriber manages subscription state to handle events. It starts subscription with initialDemand, also it is able to receive demand requests and pass them to tied subscription.
+///  DemandableSubscriber manages subscription state to handle events.
+///  It starts subscription with initialDemand, also it is able to receive demand requests and pass them to tied subscription.
 public class DemandableSubscriber<Input, Failure: Error>: Subscriber, Cancellable {
 
     enum State {
@@ -82,12 +83,12 @@ public class DemandableSubscriber<Input, Failure: Error>: Subscriber, Cancellabl
     }
 
     // MARK: call completion block if state is subscribed, otherwise ignore
-    public func receive(completion c: Subscribers.Completion<Failure>) {
+    public func receive(completion compl: Subscribers.Completion<Failure>) {
         lock.synchronized {
 
             if case .subscribed(_) = state {
                 state = .completed
-                return { self.completion(c) }
+                return { self.completion(compl) }
             }
 
             return {}
@@ -99,8 +100,8 @@ public class DemandableSubscriber<Input, Failure: Error>: Subscriber, Cancellabl
         lock.synchronized {
             var subscription: Subscription?
 
-            if case .subscribed(let s) = state {
-                subscription = s
+            if case .subscribed(let subscr) = state {
+                subscription = subscr
             }
 
             state = .completed
@@ -111,4 +112,3 @@ public class DemandableSubscriber<Input, Failure: Error>: Subscriber, Cancellabl
         }
     }
 }
-

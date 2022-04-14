@@ -182,11 +182,10 @@ extension RouterProtocol {
     // helper function that configure pop release closure and execute pop.
     // release closure is called by navigation controller when animation is completed
     private func pop(_ viewController: UIViewController,
-                      animated: Bool = true,
-                      using completion: @escaping ReleaseClosure) {
+                     animated: Bool = true,
+                     using completion: @escaping ReleaseClosure) {
 
-        navigationController.configurePopRelease(for: viewController,
-                                       using: completion)
+        navigationController.configurePopRelease(for: viewController, using: completion)
 
         navigationController.popViewController(animated: animated)
     }
