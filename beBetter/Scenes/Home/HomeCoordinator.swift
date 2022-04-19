@@ -8,12 +8,11 @@ final class HomeCoordinator: BaseCoordinator<Void> {
         return viewController
     }()
 
-    override var source: UIViewController  {
+    override var source: UIViewController {
         get {
             router.navigationController.viewControllers = [viewController]
             return router.navigationController
         }
-        set {}
     }
 
     private let tab: Tab

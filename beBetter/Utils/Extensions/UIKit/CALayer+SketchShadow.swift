@@ -6,14 +6,15 @@ extension CALayer {
     func applySketchShadow(
         color: UIColor,
         alpha: Float = 1,
-        x: CGFloat = 0,
-        y: CGFloat = 0,
+        xValue: CGFloat = 0,
+        yValue: CGFloat = 0,
         blur: CGFloat,
-        spread: CGFloat = 0)
+        spread: CGFloat = 0
+    )
     {
         shadowColor = color.cgColor
         shadowOpacity = alpha
-        shadowOffset = CGSize(width: x, height: y)
+        shadowOffset = CGSize(width: xValue, height: yValue)
         shadowRadius = blur / UIScreen.main.scale
         if spread == 0 {
             shadowPath = nil
@@ -27,10 +28,9 @@ extension CALayer {
     func applyDefaultContainerShadow() {
         applySketchShadow(color: UIColor.systemGray,
                           alpha: 0.5,
-                          x: 0,
-                          y: 0,
+                          xValue: 0,
+                          yValue: 0,
                           blur: 14,
                           spread: 0)
     }
 }
-

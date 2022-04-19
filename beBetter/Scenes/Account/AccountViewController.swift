@@ -47,4 +47,3 @@ final class AccountViewController: BaseViewController, CustomLoadedController {
         title = tab.title
     }
 }
-
