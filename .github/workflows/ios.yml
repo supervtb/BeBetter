@@ -28,7 +28,7 @@ jobs:
           scheme: $(echo beBetter)
           platform: ${{ 'iOS Simulator' }}
         run: |
-          xcodebuild build-for-testing -scheme beBetter -project beBetter.xcodeproj -destination "platform=iOS Simulator,name=iPhone 11"
+          xcodebuild build-for-testing -scheme beBetter -project beBetter.xcodeproj -destination "platform=iOS Simulator,name=iPhone 11" -onlyUsePackageVersionsFromResolvedFile
       - name: Test
         env:
           scheme: ${{ 'default' }}
