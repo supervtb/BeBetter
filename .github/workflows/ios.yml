@@ -23,15 +23,9 @@ jobs:
           #echo $default | cat >default
           #echo Using default scheme: $default
           default=$(echo beBetter)
-      - name: Build
-        env:
-          scheme: $(echo beBetter)
-          platform: ${{ 'iOS Simulator' }}
-        run: |
-          xcodebuild build-for-testing -scheme beBetter -project beBetter.xcodeproj -destination "platform=iOS Simulator,name=iPhone 11"
       - name: Test
         env:
           scheme: $(echo beBetter)
           platform: ${{ 'iOS Simulator' }}
         run: |
-          xcodebuild test-without-building -scheme beBetter -destination "platform=iOS Simulator,name=iPhone 11" -disableAutomaticPackageResolution
+          xcodebuild test-without-building -scheme beBetter -destination "platform=iOS Simulator,name=iPhone 11"
