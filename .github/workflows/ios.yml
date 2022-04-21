@@ -16,6 +16,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Update GoogleInfo
+        run: |
+          /usr/libexec/PlistBuddy -c "Set API_KEY ${{ secrets.FIREBASE_KEY }}" beBetter/Resources/GoogleService-Info.plist
       - name: Set Default Scheme
         run: |
           #scheme_list=$(xcodebuild -list -json | tr -d "\n")
