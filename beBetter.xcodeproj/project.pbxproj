@@ -37,6 +37,7 @@
 		0F704E72270FAF86004B897F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E71270FAF86004B897F /* LoginView.swift */; };
 		0F704E75270FC092004B897F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E74270FC092004B897F /* PrimaryButton.swift */; };
 		0F704E78270FC6A0004B897F /* AuthorizationBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E77270FC6A0004B897F /* AuthorizationBaseView.swift */; };
+		0FB70B7A2811A26100DFA48B /* ExportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FB70B792811A26100DFA48B /* ExportOptions.plist */; };
 		0FFD501027177E4B00F9563B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD500F27177E4B00F9563B /* Router.swift */; };
 		0FFD501227177EA900F9563B /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD501127177EA900F9563B /* RouterProtocol.swift */; };
 		0FFD501427177ECD00F9563B /* RoutableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD501327177ECD00F9563B /* RoutableProtocol.swift */; };
@@ -104,6 +105,7 @@
 		0F704E71270FAF86004B897F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0F704E74270FC092004B897F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		0F704E77270FC6A0004B897F /* AuthorizationBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationBaseView.swift; sourceTree = "<group>"; };
+		0FB70B792811A26100DFA48B /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
 		0FFD500F27177E4B00F9563B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0FFD501127177EA900F9563B /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		0FFD501327177ECD00F9563B /* RoutableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutableProtocol.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				0F704E15270F9D09004B897F /* LaunchScreen.storyboard */,
 				0F704E18270F9D09004B897F /* Info.plist */,
 				0F704E51270F9FF9004B897F /* Colors.xcassets */,
+				0FB70B792811A26100DFA48B /* ExportOptions.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F704E52270F9FF9004B897F /* Colors.xcassets in Resources */,
+				0FB70B7A2811A26100DFA48B /* ExportOptions.plist in Resources */,
 				0F6F165A2800C7F500F6B97E /* GoogleService-Info.plist in Resources */,
 				0F704E17270F9D09004B897F /* LaunchScreen.storyboard in Resources */,
 				0F704E14270F9D09004B897F /* Assets.xcassets in Resources */,
