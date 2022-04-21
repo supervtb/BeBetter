@@ -15,8 +15,6 @@
 		0F704E14270F9D09004B897F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F704E13270F9D09004B897F /* Assets.xcassets */; };
 		0F704E17270F9D09004B897F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F704E15270F9D09004B897F /* LaunchScreen.storyboard */; };
 		0F704E22270F9D0A004B897F /* beBetterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E21270F9D0A004B897F /* beBetterTests.swift */; };
-		0F704E2C270F9D0A004B897F /* beBetterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E2B270F9D0A004B897F /* beBetterUITests.swift */; };
-		0F704E2E270F9D0A004B897F /* beBetterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E2D270F9D0A004B897F /* beBetterUITestsLaunchTests.swift */; };
 		0F704E40270F9E38004B897F /* CustomLoadedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E3F270F9E38004B897F /* CustomLoadedController.swift */; };
 		0F704E44270F9E72004B897F /* TextSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E43270F9E72004B897F /* TextSize.swift */; };
 		0F704E48270F9EA6004B897F /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E47270F9EA6004B897F /* UIView+Anchors.swift */; };
@@ -70,13 +68,6 @@
 			remoteGlobalIDString = 0F704E06270F9D08004B897F;
 			remoteInfo = beBetter;
 		};
-		0F704E28270F9D0A004B897F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F704DFF270F9D08004B897F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0F704E06270F9D08004B897F;
-			remoteInfo = beBetter;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -89,7 +80,6 @@
 		0F704E18270F9D09004B897F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F704E1D270F9D0A004B897F /* beBetterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beBetterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F704E21270F9D0A004B897F /* beBetterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beBetterTests.swift; sourceTree = "<group>"; };
-		0F704E27270F9D0A004B897F /* beBetterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beBetterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F704E2B270F9D0A004B897F /* beBetterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beBetterUITests.swift; sourceTree = "<group>"; };
 		0F704E2D270F9D0A004B897F /* beBetterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beBetterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0F704E3F270F9E38004B897F /* CustomLoadedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoadedController.swift; sourceTree = "<group>"; };
@@ -154,13 +144,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0F704E24270F9D0A004B897F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -179,7 +162,6 @@
 			children = (
 				0F704E07270F9D08004B897F /* beBetter.app */,
 				0F704E1D270F9D0A004B897F /* beBetterTests.xctest */,
-				0F704E27270F9D0A004B897F /* beBetterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -500,24 +482,6 @@
 			productReference = 0F704E1D270F9D0A004B897F /* beBetterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0F704E26270F9D0A004B897F /* beBetterUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0F704E37270F9D0A004B897F /* Build configuration list for PBXNativeTarget "beBetterUITests" */;
-			buildPhases = (
-				0F704E23270F9D0A004B897F /* Sources */,
-				0F704E24270F9D0A004B897F /* Frameworks */,
-				0F704E25270F9D0A004B897F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0F704E29270F9D0A004B897F /* PBXTargetDependency */,
-			);
-			name = beBetterUITests;
-			productName = beBetterUITests;
-			productReference = 0F704E27270F9D0A004B897F /* beBetterUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -532,10 +496,6 @@
 						CreatedOnToolsVersion = 13.0;
 					};
 					0F704E1C270F9D0A004B897F = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 0F704E06270F9D08004B897F;
-					};
-					0F704E26270F9D0A004B897F = {
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 0F704E06270F9D08004B897F;
 					};
@@ -559,7 +519,6 @@
 			targets = (
 				0F704E06270F9D08004B897F /* beBetter */,
 				0F704E1C270F9D0A004B897F /* beBetterTests */,
-				0F704E26270F9D0A004B897F /* beBetterUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -577,13 +536,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0F704E1B270F9D0A004B897F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0F704E25270F9D0A004B897F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -672,15 +624,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0F704E23270F9D0A004B897F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0F704E2E270F9D0A004B897F /* beBetterUITestsLaunchTests.swift in Sources */,
-				0F704E2C270F9D0A004B897F /* beBetterUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -688,11 +631,6 @@
 			isa = PBXTargetDependency;
 			target = 0F704E06270F9D08004B897F /* beBetter */;
 			targetProxy = 0F704E1E270F9D0A004B897F /* PBXContainerItemProxy */;
-		};
-		0F704E29270F9D0A004B897F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0F704E06270F9D08004B897F /* beBetter */;
-			targetProxy = 0F704E28270F9D0A004B897F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -891,7 +829,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LL5V2M9K7R;
+				DEVELOPMENT_TEAM = NCJC54GM5Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -916,7 +854,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LL5V2M9K7R;
+				DEVELOPMENT_TEAM = NCJC54GM5Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -931,52 +869,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beBetter.app/beBetter";
-			};
-			name = Release;
-		};
-		0F704E38270F9D0A004B897F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LL5V2M9K7R;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.taketask.beBetterUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = beBetter;
-			};
-			name = Debug;
-		};
-		0F704E39270F9D0A004B897F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LL5V2M9K7R;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.taketask.beBetterUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = beBetter;
 			};
 			name = Release;
 		};
@@ -1010,15 +902,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F704E37270F9D0A004B897F /* Build configuration list for PBXNativeTarget "beBetterUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0F704E38270F9D0A004B897F /* Debug */,
-				0F704E39270F9D0A004B897F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -1026,8 +909,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
+				kind = exactVersion;
+				version = 8.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
