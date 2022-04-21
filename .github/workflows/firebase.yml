@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Update GoogleInfo
         run: |
-          ls -aR | grep ":$" | perl -pe 's/:$//;s/[^-][^\/]*\//    /g;s/^    (\S)/└── \1/;s/(^    |    (?= ))/│   /g;s/    (\S)/└── \1/'
+          ls
       - name: Set Default Scheme
         run: |
           default=$(echo beBetter)
