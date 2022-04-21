@@ -10,9 +10,23 @@ jobs:
     runs-on: macos-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Update GoogleInfo
         run: |
-          ls
+          /usr/libexec/PlistBuddy -c "Set API_KEY ${{ secrets.FIREBASE_KEY }}" beBetter/Resources/GoogleService-Info.plist
       - name: Set Default Scheme
         run: |
           default=$(echo beBetter)
+      - name: Build
+        env:
+          scheme: $(echo beBetter)
+          platform: ${{ 'iOS Simulator' }}
+        run: |
+          xcodebuild build-for-testing -scheme beBetter -project beBetter.xcodeproj -destination "platform=iOS Simulator,name=iPhone 11"
+      - name: Test
+        env:
+          scheme: $(echo beBetter)
+          platform: ${{ 'iOS Simulator' }}
+        run: |
+          xcodebuild test-without-building -scheme beBetter -destination "platform=iOS Simulator,name=iPhone 11"
