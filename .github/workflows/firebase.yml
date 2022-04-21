@@ -6,7 +6,7 @@ env:
 
 jobs:
   build:
-    name: Build and Test default scheme using any available iPhone simulator
+    name: Build and archive ipa
     runs-on: macos-latest
 
     steps:
@@ -15,18 +15,12 @@ jobs:
       - name: Update GoogleInfo
         run: |
           /usr/libexec/PlistBuddy -c "Set API_KEY ${{ secrets.FIREBASE_KEY }}" beBetter/Resources/GoogleService-Info.plist
-      - name: Set Default Scheme
+      - name: Install firebase
         run: |
-          default=$(echo beBetter)
-      - name: Build
-        env:
-          scheme: $(echo beBetter)
-          platform: ${{ 'iOS Simulator' }}
+          npm install -g firebase-tools
+      - name: Archive build
         run: |
-          xcodebuild build-for-testing -scheme beBetter -project beBetter.xcodeproj -destination "platform=iOS Simulator,name=iPhone 11"
-      - name: Test
-        env:
-          scheme: $(echo beBetter)
-          platform: ${{ 'iOS Simulator' }}
+          xcodebuild archive -scheme beBetter -sdk iphoneos -allowProvisioningUpdates -archivePath beBetter.xcarchive
+      - name: Firebase login 
         run: |
-          xcodebuild test-without-building -scheme beBetter -destination "platform=iOS Simulator,name=iPhone 11"
+          firebase projects:list --token "${{ secrets.FIREBASE_ACCESS_TOKEN }}"
