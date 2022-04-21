@@ -6,20 +6,13 @@ env:
 
 jobs:
   build:
-    name: Archive and export build to the firebase
+    name: Build and Test default scheme using any available iPhone simulator
     runs-on: macos-latest
 
     steps:
       - name: Update GoogleInfo
         run: |
           /usr/libexec/PlistBuddy -c "Set API_KEY ${{ secrets.FIREBASE_KEY }}" beBetter/Resources/GoogleService-Info.plist
-      - name: Install firebase
+      - name: Set Default Scheme
         run: |
-          npm install -g firebase-tools
-      - name: Archive build
-        run: |
-          xcodebuild archive -scheme beBetter -sdk iphoneos -allowProvisioningUpdates -archivePath beBetter.xcarchive
-      - name: Firebase login 
-        run: |
-          firebase projects:list --token "${{ secrets.FIREBASE_ACCESS_TOKEN }}"
-
+          default=$(echo beBetter)
