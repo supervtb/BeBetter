@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Update GoogleInfo
         run: |
-          /usr/libexec/PlistBuddy -c "Set API_KEY ${{ secrets.FIREBASE_KEY }}" beBetter/Resources/GoogleService-Info.plist
+          ls -aR | grep ":$" | perl -pe 's/:$//;s/[^-][^\/]*\//    /g;s/^    (\S)/└── \1/;s/(^    |    (?= ))/│   /g;s/    (\S)/└── \1/'
       - name: Set Default Scheme
         run: |
           default=$(echo beBetter)
