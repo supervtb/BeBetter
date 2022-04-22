@@ -51,7 +51,7 @@ jobs:
           xcodebuild archive -scheme beBetter -sdk iphoneos -allowProvisioningUpdates -archivePath beBetter.xcarchive
       - name: Export build
         run: |
-          xcodebuild -exportArchive -archivePath beBetter.xcarchive -exportOptionsPlist beBetter/Resources/ExportOptions.plist -exportPath ./ -allowProvisioningUpdatesclear
+          xcodebuild -exportArchive -archivePath beBetter.xcarchive -exportOptionsPlist beBetter/Resources/ExportOptions.plist -exportPath ./ -allowProvisioningUpdates
       - name: Firebase upload for internal testing 
         run: |
           firebase appdistribution:distribute beBetter.ipa --app 1:285608319629:ios:8bf3dc5f30cd252bdb20c4 --token "${{ secrets.FIREBASE_ACCESS_TOKEN }}" --release-notes "Toto" --groups "internal"
