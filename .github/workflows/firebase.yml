@@ -49,6 +49,9 @@ jobs:
       - name: Archive build
         run: |
           xcodebuild archive -scheme beBetter -sdk iphoneos -allowProvisioningUpdates -archivePath beBetter.xcarchive
+      - name: Export build
+        run: |
+          xcodebuild -exportArchive -archivePath beBetter.xcarchive -exportOptionsPlist beBetter/Resources/ExportOptions.plist -exportPath -allowProvisioningUpdates
       - name: Firebase login 
         run: |
           firebase projects:list --token "${{ secrets.FIREBASE_ACCESS_TOKEN }}"
