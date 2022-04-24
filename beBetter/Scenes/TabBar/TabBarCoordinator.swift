@@ -19,7 +19,7 @@ final class TabBarCoordinator: BaseCoordinator<Void> {
 
     let tabbarController = UITabBarController()
 
-    override var source: UIViewController  {
+    override var source: UIViewController {
         get { tabbarController }
         set {}
     }
