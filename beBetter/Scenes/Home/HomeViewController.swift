@@ -52,7 +52,7 @@ extension HomeViewController: UITableViewDataSource {
         ) as? HomeTableViewCell else {
             return UITableViewCell()
         }
-        cell.titleLabel.text = "toto"
+        cell.titleLabel.text = "Test title"
         return cell
     }
 }
