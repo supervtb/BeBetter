@@ -16,6 +16,15 @@ final class LoginView: AuthorizationBaseView {
         return vStack
     }()
 
+    private let headerContentStack: UIStackView = {
+        let vStack = UIStackView()
+        vStack.axis = .vertical
+        vStack.spacing = 12
+        vStack.distribution = .fill
+        vStack.alignment = .fill
+        return vStack
+    }()
+
     private let fieldsStack: UIStackView = {
         let vStack = UIStackView()
         vStack.axis = .vertical
@@ -64,7 +73,7 @@ final class LoginView: AuthorizationBaseView {
             fieldsStack.addArrangedSubview($0)
         }
 
-        [fieldsStack, loginButton, UIView()].forEach {
+        [headerContentStack, fieldsStack, loginButton, UIView()].forEach {
             contentStack.addArrangedSubview($0)
         }
 

@@ -4,6 +4,8 @@ class HomeTableViewCell: UITableViewCell {
 
     static var reuseIdentifier = "HomeTableViewCell"
 
+    private let bookIconName = "book"
+
     let cellView: UIView = {
         let view = UIView(frame: .zero)
         view.backgroundColor = UIColor(.primary)
@@ -24,7 +26,7 @@ class HomeTableViewCell: UITableViewCell {
     let iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "")
+        imageView.tintColor = UIColor(.backgroundSecondary)
         imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor,
                                          multiplier: 1 / 1).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: 18).isActive = true
@@ -40,6 +42,7 @@ class HomeTableViewCell: UITableViewCell {
         prepareCellView()
         prepareTransactionImageView()
         prepareTitleLabel()
+        prepareIcon()
     }
 
     private func prepareCellView() {
@@ -64,9 +67,13 @@ class HomeTableViewCell: UITableViewCell {
         cellView.addSubview(titleLabel, constraints: [
             equal(\.topAnchor),
             equal(\.trailingAnchor),
-            equal(\.bottomAnchor),
+            equal(\.bottomAnchor)
         ])
-        titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 16).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 8).isActive = true
+    }
+
+    private func prepareIcon() {
+        iconImageView.image = UIImage(systemName: bookIconName)
     }
 
     func didSelectCell() {
@@ -83,4 +90,3 @@ class HomeTableViewCell: UITableViewCell {
         titleLabel.text = title
     }
 }
-

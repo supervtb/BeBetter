@@ -19,13 +19,17 @@ final class AccountCoordinator: BaseCoordinator<Void> {
 
     private let tab: Tab
 
+    private let itemIconName = "person"
+
+    private let selectedItemIconName = "person.fill"
+
     init(presenting navigationController: NavigationControllerReleaseHandler, tab: Tab) {
 
         self.tab = tab
 
         navigationController.tabBarItem = UITabBarItem(title: tab.title,
-                                                       image: nil,
-                                                       selectedImage: nil)
+                                                       image: UIImage(systemName: itemIconName),
+                                                       selectedImage: UIImage(systemName: selectedItemIconName))
 
         super.init(presenting: navigationController)
     }

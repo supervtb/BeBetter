@@ -76,4 +76,3 @@ open class AuthorizationBaseView: KeyboardAwareScrollContainerView {
 
     func updateContent() {}
 }
-
