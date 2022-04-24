@@ -7,7 +7,7 @@ final class LoginCoordinator: BaseCoordinator<Void> {
         return LoginViewController()
     }()
 
-    override var source: UIViewController  {
+    override var source: UIViewController {
         get { viewController }
         set {}
     }

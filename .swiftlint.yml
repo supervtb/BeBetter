@@ -24,6 +24,7 @@ opt_in_rules:
 # disabled rules
 disabled_rules:
   - notification_center_detachment
+  - trailing_whitespace
 
 
 # options

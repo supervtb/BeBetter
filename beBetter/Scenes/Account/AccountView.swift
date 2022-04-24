@@ -16,4 +16,3 @@ final class AccountView: UIView {
         backgroundColor = UIColor(.backgroundPrimary)
     }
 }
-
