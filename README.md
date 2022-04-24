@@ -1,7 +1,7 @@
 # BeBetter
 
 Instalation:
-1. Download prpject
+1. Download project
 2. Run terminal
 3. Go to the project folder
 4. Do git update-index --assume-unchanged beBetter/Resources/GoogleService-Info.plist for avoid tracking changes in this file
