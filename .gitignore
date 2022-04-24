@@ -1,0 +1,5 @@
+# Swift Package Manager Packages/
+Package.resolved
+
+# Exclude GoogleService
+beBetter/Resources/GoogleService-Info.plist
