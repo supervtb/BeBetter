@@ -3,9 +3,7 @@ import Combine
 
 final class LoginViewController: BaseViewController, CustomLoadedController {
 
-    let loginSubject = PassthroughSubject<Bool, Never>()
-
-    let signUpSubject = PassthroughSubject<Bool, Never>()
+    let stepSubject = PassthroughSubject<Step, Never>()
 
     private var bag = Set<AnyCancellable>()
     
@@ -22,17 +20,17 @@ final class LoginViewController: BaseViewController, CustomLoadedController {
 
         _view.onLogin = {
             self.loginSuccess()
-                .subscribe(self.loginSubject)
+                .subscribe(self.stepSubject)
                 .store(in: &self.bag)
         }
 
         _view.onSignUp = {
-            self.signUpSubject.send(true)
+            self.stepSubject.send(.signUp)
         }
     }
 
-    private func loginSuccess() -> AnyPublisher<Bool, Never> {
-        Just(true)
+    private func loginSuccess() -> AnyPublisher<Step, Never> {
+        Just(.loggedIn)
             .delay(for: .seconds(1), scheduler: RunLoop.main)
             .eraseToAnyPublisher()
     }

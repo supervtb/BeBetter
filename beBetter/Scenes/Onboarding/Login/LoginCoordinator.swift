@@ -16,20 +16,21 @@ final class LoginCoordinator: BaseCoordinator<Void> {
     }
 
     override func start() -> AnyPublisher<Void, Never> {
-        viewController.signUpSubject
-            .flatMap { [unowned self] _ in
-                self.startSignUp()
-            }.sink(receiveValue: { _ in
-                //
+        viewController.stepSubject.filter { $0 == .signUp }
+            .flatMap { _ in self.startSignUp() }
+            .filter { $0 == .signUpEnded }
+            .sink(receiveValue: { _ in
+                self.viewController.stepSubject.send(.loggedIn)
             })
             .store(in: &bag)
 
-        return viewController.loginSubject
+
+        return viewController.stepSubject.filter { $0 == .loggedIn }
             .map { _ in () }
             .eraseToAnyPublisher()
     }
 
-    private func startSignUp() -> AnyPublisher<Bool, Never> {
+    private func startSignUp() -> AnyPublisher<Step, Never> {
         let coordinator = SignUpCoordinator(presenting: NavigationController())
         return present(to: coordinator)
     }

@@ -3,9 +3,7 @@ import Combine
 
 final class SignUpViewController: BaseViewController, CustomLoadedController {
 
-    let completedSubject = PassthroughSubject<Bool, Never>()
-
-    let presentSubject = PassthroughSubject<Void, Never>()
+    let stepSubject = PassthroughSubject<Step, Never>()
 
     private var bag = Set<AnyCancellable>()
 
@@ -16,7 +14,7 @@ final class SignUpViewController: BaseViewController, CustomLoadedController {
     private lazy var closeButton: UIBarButtonItem = {
         let button = UIBarButtonItem(title: "",
                                      image: UIImage(systemName: "xmark.circle"), primaryAction: UIAction(handler: { [unowned self] _ in
-            self.completedSubject.send(true)
+            self.stepSubject.send(.signUpCanceled)
         }))
         button.tintColor = UIColor.black
 
@@ -33,13 +31,13 @@ final class SignUpViewController: BaseViewController, CustomLoadedController {
 
         _view.onSignUp = {
             self.signUpSuccess()
-                .subscribe(self.completedSubject)
+                .subscribe(self.stepSubject)
                 .store(in: &self.bag)
         }
     }
 
-    private func signUpSuccess() -> AnyPublisher<Bool, Never> {
-        Just(true)
+    private func signUpSuccess() -> AnyPublisher<Step, Never> {
+        Just(.signUpEnded)
             .eraseToAnyPublisher()
     }
 }

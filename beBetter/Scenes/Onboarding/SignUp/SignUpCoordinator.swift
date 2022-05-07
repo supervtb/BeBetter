@@ -1,7 +1,7 @@
 import UIKit
 import Combine
 
-final class SignUpCoordinator: BaseCoordinator<Bool> {
+final class SignUpCoordinator: BaseCoordinator<Step> {
 
     lazy var viewController = {
         return SignUpViewController()
@@ -20,15 +20,15 @@ final class SignUpCoordinator: BaseCoordinator<Bool> {
         self.source = viewController
     }
 
-    override func start() -> AnyPublisher<Bool, Never> {
-        let dismiss = viewController.completedSubject.filter { $0 == true }
+    override func start() -> AnyPublisher<Step, Never> {
+        let dismiss = viewController.stepSubject.filter { $0 == .signUpEnded || $0 == .signUpCanceled }
 
-        let multiplePresentResult = viewController.presentSubject
+        let multiplePresentResult = viewController.stepSubject.filter { $0 == .signUp }
             .eraseToAnyPublisher()
-            .flatMap { _ -> AnyPublisher<Bool, Never> in
+            .flatMap { _ -> AnyPublisher<Step, Never> in
                 let coordinator = SignUpCoordinator(presenting: NavigationController())
                 return self.present(to: coordinator)
-            }.filter { $0 == true }
+            }
 
         return Publishers.Merge(dismiss, multiplePresentResult)
             .eraseToAnyPublisher()
