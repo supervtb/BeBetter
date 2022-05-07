@@ -1,10 +1,10 @@
 import UIKit
 import Combine
 
-final class SignUpCoordinator: BaseCoordinator<Step> {
+final class ResetPasswordCoordinator: BaseCoordinator<Step> {
 
     lazy var viewController = {
-        return SignUpViewController()
+        return ResetPasswordViewController()
     }()
 
     override var source: UIViewController {
@@ -21,7 +21,7 @@ final class SignUpCoordinator: BaseCoordinator<Step> {
     }
 
     override func start() -> AnyPublisher<Step, Never> {
-        let dismiss = viewController.stepSubject.filter { $0 == .signUpEnded || $0 == .signUpCanceled }
+        let dismiss = viewController.stepSubject.filter { $0 == .resetPasswordEnded || $0 == .resetPasswordCanceled }
         return dismiss.eraseToAnyPublisher()
     }
 }
