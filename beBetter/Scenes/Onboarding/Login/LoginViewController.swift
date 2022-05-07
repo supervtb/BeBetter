@@ -3,7 +3,9 @@ import Combine
 
 final class LoginViewController: BaseViewController, CustomLoadedController {
 
-    let completedSubject = PassthroughSubject<Bool, Never>()
+    let loginSubject = PassthroughSubject<Bool, Never>()
+
+    let signUpSubject = PassthroughSubject<Bool, Never>()
 
     private var bag = Set<AnyCancellable>()
     
@@ -20,8 +22,12 @@ final class LoginViewController: BaseViewController, CustomLoadedController {
 
         _view.onLogin = {
             self.loginSuccess()
-                .subscribe(self.completedSubject)
+                .subscribe(self.loginSubject)
                 .store(in: &self.bag)
+        }
+
+        _view.onSignUp = {
+            self.signUpSubject.send(true)
         }
     }
 

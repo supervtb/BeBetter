@@ -8,13 +8,29 @@ final class LoginCoordinator: BaseCoordinator<Void> {
     }()
 
     override var source: UIViewController {
-        get { viewController }
+        get {
+            router.navigationController.viewControllers = [viewController]
+            return router.navigationController
+        }
         set {}
     }
 
     override func start() -> AnyPublisher<Void, Never> {
-        return viewController.completedSubject
+        viewController.signUpSubject
+            .flatMap { [unowned self] _ in
+                self.startSignUp()
+            }.sink(receiveValue: { _ in
+                //
+            })
+            .store(in: &bag)
+
+        return viewController.loginSubject
             .map { _ in () }
             .eraseToAnyPublisher()
+    }
+
+    private func startSignUp() -> AnyPublisher<Bool, Never> {
+        let coordinator = SignUpCoordinator(presenting: NavigationController())
+        return present(to: coordinator)
     }
 }

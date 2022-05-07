@@ -1,10 +1,8 @@
 import UIKit
 
-final class LoginView: AuthorizationBaseView {
+final class SignUpView: AuthorizationBaseView {
 
     private var contentHeightConstraint: NSLayoutConstraint?
-
-    var onLogin: (() -> Void)?
 
     var onSignUp: (() -> Void)?
 
@@ -54,15 +52,18 @@ final class LoginView: AuthorizationBaseView {
         return field
     }()
 
-    let loginButton: PrimaryButton = {
-        let button = PrimaryButton(type: .system)
-        button.updateTitle("Login")
-        return button
+    let confirmPasswordTextField: FloatingLabelField = {
+        let textField = BeBetterSecureTextField()
+        textField.placeholder = "Confirm password"
+        textField.keyboardType = .emailAddress
+        let field = FloatingLabelField(textField: textField)
+        field.title = "Please enter your password again"
+        return field
     }()
 
     let signUpButton: PrimaryButton = {
         let button = PrimaryButton(type: .system)
-        button.updateTitle("Sign Up")
+        button.updateTitle("Register")
         return button
     }()
 
@@ -77,11 +78,11 @@ final class LoginView: AuthorizationBaseView {
     }
 
     override func contentView() -> UIView {
-        [emailTextField, passwordTextField].forEach {
+        [emailTextField, passwordTextField, confirmPasswordTextField].forEach {
             fieldsStack.addArrangedSubview($0)
         }
 
-        [headerContentStack, fieldsStack, loginButton, signUpButton, UIView()].forEach {
+        [headerContentStack, fieldsStack, signUpButton, UIView()].forEach {
             contentStack.addArrangedSubview($0)
         }
 
@@ -89,7 +90,7 @@ final class LoginView: AuthorizationBaseView {
     }
 
     override func updateContent() {
-        titleLabel.text = "Login"
+        titleLabel.text = "Register"
     }
 
     private func setup() {
@@ -97,12 +98,7 @@ final class LoginView: AuthorizationBaseView {
     }
 
     private func setupActions() {
-        loginButton.addTarget(self, action: #selector(self.onLoginTapped), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(self.onSignUpTapped), for: .touchUpInside)
-    }
-
-    @objc private func onLoginTapped() {
-        onLogin?()
     }
 
     @objc private func onSignUpTapped() {
