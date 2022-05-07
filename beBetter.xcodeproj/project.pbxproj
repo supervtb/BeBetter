@@ -37,6 +37,9 @@
 		0F704E72270FAF86004B897F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E71270FAF86004B897F /* LoginView.swift */; };
 		0F704E75270FC092004B897F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E74270FC092004B897F /* PrimaryButton.swift */; };
 		0F704E78270FC6A0004B897F /* AuthorizationBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E77270FC6A0004B897F /* AuthorizationBaseView.swift */; };
+		0F7DCB8328247225006EF7B1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7DCB8228247225006EF7B1 /* SignUpView.swift */; };
+		0F7DCB852824722F006EF7B1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7DCB842824722F006EF7B1 /* SignUpViewController.swift */; };
+		0F7DCB872824723C006EF7B1 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7DCB862824723C006EF7B1 /* SignUpCoordinator.swift */; };
 		0FB70B7A2811A26100DFA48B /* ExportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FB70B792811A26100DFA48B /* ExportOptions.plist */; };
 		0FFD501027177E4B00F9563B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD500F27177E4B00F9563B /* Router.swift */; };
 		0FFD501227177EA900F9563B /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD501127177EA900F9563B /* RouterProtocol.swift */; };
@@ -105,6 +108,9 @@
 		0F704E71270FAF86004B897F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0F704E74270FC092004B897F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		0F704E77270FC6A0004B897F /* AuthorizationBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationBaseView.swift; sourceTree = "<group>"; };
+		0F7DCB8228247225006EF7B1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		0F7DCB842824722F006EF7B1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0F7DCB862824723C006EF7B1 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		0FB70B792811A26100DFA48B /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
 		0FFD500F27177E4B00F9563B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0FFD501127177EA900F9563B /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
@@ -324,6 +330,7 @@
 		0F704E67270FA81D004B897F /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				0F7DCB8128247210006EF7B1 /* SignUp */,
 				0F704E68270FA83D004B897F /* Login */,
 			);
 			path = Onboarding;
@@ -371,6 +378,16 @@
 				0F704E77270FC6A0004B897F /* AuthorizationBaseView.swift */,
 			);
 			path = AuthorizationBaseView;
+			sourceTree = "<group>";
+		};
+		0F7DCB8128247210006EF7B1 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				0F7DCB8228247225006EF7B1 /* SignUpView.swift */,
+				0F7DCB842824722F006EF7B1 /* SignUpViewController.swift */,
+				0F7DCB862824723C006EF7B1 /* SignUpCoordinator.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		0FFD500E27177E3B00F9563B /* Router */ = {
@@ -579,6 +596,7 @@
 				0F704E0B270F9D08004B897F /* AppDelegate.swift in Sources */,
 				0FFD5036271789D800F9563B /* AccountView.swift in Sources */,
 				0FFD50282717842500F9563B /* TabBarCoordinator.swift in Sources */,
+				0F7DCB852824722F006EF7B1 /* SignUpViewController.swift in Sources */,
 				0F704E4A270F9EBC004B897F /* UIEdgeInsets+Equal.swift in Sources */,
 				0F704E4C270F9ED1004B897F /* CALayer+SketchShadow.swift in Sources */,
 				0F704E78270FC6A0004B897F /* AuthorizationBaseView.swift in Sources */,
@@ -589,6 +607,7 @@
 				0FFD501227177EA900F9563B /* RouterProtocol.swift in Sources */,
 				0F704E44270F9E72004B897F /* TextSize.swift in Sources */,
 				0F704E56270FA3AA004B897F /* KeyboardAwareCollectionView.swift in Sources */,
+				0F7DCB8328247225006EF7B1 /* SignUpView.swift in Sources */,
 				0F704E70270FAF48004B897F /* LoginViewController.swift in Sources */,
 				0FFD503A271796CF00F9563B /* Step.swift in Sources */,
 				0F704E6C270FAAD1004B897F /* Coordinator.swift in Sources */,
@@ -602,6 +621,7 @@
 				0F704E0D270F9D08004B897F /* SceneDelegate.swift in Sources */,
 				0FFD502E2717854300F9563B /* HomeView.swift in Sources */,
 				0FFD503D2717A5CE00F9563B /* HomeTableViewCell.swift in Sources */,
+				0F7DCB872824723C006EF7B1 /* SignUpCoordinator.swift in Sources */,
 				0FFD502C2717852600F9563B /* HomeViewController.swift in Sources */,
 				0FFD501027177E4B00F9563B /* Router.swift in Sources */,
 				0F704E50270F9F48004B897F /* UIColor+SemanticAssets.swift in Sources */,
