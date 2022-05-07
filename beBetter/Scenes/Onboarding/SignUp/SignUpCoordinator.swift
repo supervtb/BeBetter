@@ -22,15 +22,6 @@ final class SignUpCoordinator: BaseCoordinator<Step> {
 
     override func start() -> AnyPublisher<Step, Never> {
         let dismiss = viewController.stepSubject.filter { $0 == .signUpEnded || $0 == .signUpCanceled }
-
-        let multiplePresentResult = viewController.stepSubject.filter { $0 == .signUp }
-            .eraseToAnyPublisher()
-            .flatMap { _ -> AnyPublisher<Step, Never> in
-                let coordinator = SignUpCoordinator(presenting: NavigationController())
-                return self.present(to: coordinator)
-            }
-
-        return Publishers.Merge(dismiss, multiplePresentResult)
-            .eraseToAnyPublisher()
+        return dismiss.eraseToAnyPublisher()
     }
 }
