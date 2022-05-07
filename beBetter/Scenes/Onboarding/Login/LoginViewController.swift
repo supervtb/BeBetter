@@ -27,6 +27,10 @@ final class LoginViewController: BaseViewController, CustomLoadedController {
         _view.onSignUp = {
             self.stepSubject.send(.signUp)
         }
+
+        _view.onResetPassword = {
+            self.stepSubject.send(.resetPassword)
+        }
     }
 
     private func loginSuccess() -> AnyPublisher<Step, Never> {

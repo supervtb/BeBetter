@@ -1,12 +1,8 @@
 import UIKit
 
-final class LoginView: AuthorizationBaseView {
+final class ResetPasswordView: AuthorizationBaseView {
 
     private var contentHeightConstraint: NSLayoutConstraint?
-
-    var onLogin: (() -> Void)?
-
-    var onSignUp: (() -> Void)?
 
     var onResetPassword: (() -> Void)?
 
@@ -47,30 +43,9 @@ final class LoginView: AuthorizationBaseView {
         return field
     }()
 
-    let passwordTextField: FloatingLabelField = {
-        let textField = BeBetterSecureTextField()
-        textField.placeholder = "Password"
-        textField.keyboardType = .emailAddress
-        let field = FloatingLabelField(textField: textField)
-        field.title = "Please enter your password"
-        return field
-    }()
-
-    let loginButton: PrimaryButton = {
-        let button = PrimaryButton(type: .system)
-        button.updateTitle("Login")
-        return button
-    }()
-
-    let signUpButton: PrimaryButton = {
-        let button = PrimaryButton(type: .system)
-        button.updateTitle("Sign Up")
-        return button
-    }()
-
     let resetPasswordButton: PrimaryButton = {
         let button = PrimaryButton(type: .system)
-        button.updateTitle("Reset password")
+        button.updateTitle("Reset")
         return button
     }()
 
@@ -85,11 +60,11 @@ final class LoginView: AuthorizationBaseView {
     }
 
     override func contentView() -> UIView {
-        [emailTextField, passwordTextField].forEach {
-            fieldsStack.addArrangedSubview($0)
-        }
 
-        [headerContentStack, fieldsStack, loginButton, signUpButton, resetPasswordButton, UIView()].forEach {
+        fieldsStack.addArrangedSubview(emailTextField)
+
+
+        [headerContentStack, fieldsStack, resetPasswordButton, UIView()].forEach {
             contentStack.addArrangedSubview($0)
         }
 
@@ -97,7 +72,7 @@ final class LoginView: AuthorizationBaseView {
     }
 
     override func updateContent() {
-        titleLabel.text = "Login"
+        titleLabel.text = "Reset password"
     }
 
     private func setup() {
@@ -105,20 +80,11 @@ final class LoginView: AuthorizationBaseView {
     }
 
     private func setupActions() {
-        loginButton.addTarget(self, action: #selector(self.onLoginTapped), for: .touchUpInside)
-        signUpButton.addTarget(self, action: #selector(self.onSignUpTapped), for: .touchUpInside)
         resetPasswordButton.addTarget(self, action: #selector(self.onResetPasswordTapped), for: .touchUpInside)
-    }
-
-    @objc private func onLoginTapped() {
-        onLogin?()
-    }
-
-    @objc private func onSignUpTapped() {
-        onSignUp?()
     }
 
     @objc private func onResetPasswordTapped() {
         onResetPassword?()
     }
 }
+

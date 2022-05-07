@@ -4,4 +4,7 @@ enum Step {
     case signUp
     case signUpEnded
     case signUpCanceled
+    case resetPassword
+    case resetPasswordEnded
+    case resetPasswordCanceled
 }

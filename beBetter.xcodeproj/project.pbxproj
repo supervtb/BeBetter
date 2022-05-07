@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3378612826C94F0007D95A /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3378602826C94F0007D95A /* ResetPasswordView.swift */; };
+		0F3378632826C9560007D95A /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3378622826C9560007D95A /* ResetPasswordViewController.swift */; };
+		0F3378652826C95C0007D95A /* ResetPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3378642826C95C0007D95A /* ResetPasswordCoordinator.swift */; };
 		0F6F16522800C40E00F6B97E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 0F6F16512800C40E00F6B97E /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		0F6F16542800C40E00F6B97E /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 0F6F16532800C40E00F6B97E /* FirebaseAppDistribution-Beta */; };
 		0F6F165A2800C7F500F6B97E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F6F16592800C7F500F6B97E /* GoogleService-Info.plist */; };
@@ -75,6 +78,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F3378602826C94F0007D95A /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		0F3378622826C9560007D95A /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		0F3378642826C95C0007D95A /* ResetPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordCoordinator.swift; sourceTree = "<group>"; };
 		0F6F16592800C7F500F6B97E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F704E07270F9D08004B897F /* beBetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beBetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F704E0A270F9D08004B897F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +161,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F33785F2826C9360007D95A /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				0F3378602826C94F0007D95A /* ResetPasswordView.swift */,
+				0F3378622826C9560007D95A /* ResetPasswordViewController.swift */,
+				0F3378642826C95C0007D95A /* ResetPasswordCoordinator.swift */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
 		0F704DFE270F9D08004B897F = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +346,7 @@
 		0F704E67270FA81D004B897F /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				0F33785F2826C9360007D95A /* ResetPassword */,
 				0F7DCB8128247210006EF7B1 /* SignUp */,
 				0F704E68270FA83D004B897F /* Login */,
 			);
@@ -593,6 +610,7 @@
 				0FFD5025271780B300F9563B /* LoginCoordinator.swift in Sources */,
 				0F704E63270FA4D3004B897F /* UITextField+CaretPosition.swift in Sources */,
 				0FFD5034271789CE00F9563B /* AccountViewController.swift in Sources */,
+				0F3378612826C94F0007D95A /* ResetPasswordView.swift in Sources */,
 				0F704E0B270F9D08004B897F /* AppDelegate.swift in Sources */,
 				0FFD5036271789D800F9563B /* AccountView.swift in Sources */,
 				0FFD50282717842500F9563B /* TabBarCoordinator.swift in Sources */,
@@ -630,6 +648,7 @@
 				0FFD501F27177FC900F9563B /* Combine+Util.swift in Sources */,
 				0F704E72270FAF86004B897F /* LoginView.swift in Sources */,
 				0F704E6E270FAAF4004B897F /* MainCoordinator.swift in Sources */,
+				0F3378652826C95C0007D95A /* ResetPasswordCoordinator.swift in Sources */,
 				0F704E58270FA3D1004B897F /* KeyboardAwareScrollView.swift in Sources */,
 				0FFD50212717801400F9563B /* TakeUntil.swift in Sources */,
 				0F704E61270FA4B0004B897F /* FloatingLabelField.swift in Sources */,
@@ -637,6 +656,7 @@
 				0F704E5E270FA41A004B897F /* KeyboardAwareScrollContainerView.swift in Sources */,
 				0FFD501A27177F4E00F9563B /* BaseViewController.swift in Sources */,
 				0FFD50302717870800F9563B /* HomeCoordinator.swift in Sources */,
+				0F3378632826C9560007D95A /* ResetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
