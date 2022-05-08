@@ -52,6 +52,27 @@
 		0F7DCB8328247225006EF7B1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7DCB8228247225006EF7B1 /* SignUpView.swift */; };
 		0F7DCB852824722F006EF7B1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7DCB842824722F006EF7B1 /* SignUpViewController.swift */; };
 		0F7DCB872824723C006EF7B1 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7DCB862824723C006EF7B1 /* SignUpCoordinator.swift */; };
+		0F92DD2F282831F00075A6E2 /* Gilroy-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD1B282831EF0075A6E2 /* Gilroy-BoldItalic.otf */; };
+		0F92DD30282831F00075A6E2 /* Gilroy-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD1C282831EF0075A6E2 /* Gilroy-Heavy.otf */; };
+		0F92DD31282831F00075A6E2 /* Gilroy-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD1D282831EF0075A6E2 /* Gilroy-MediumItalic.otf */; };
+		0F92DD32282831F00075A6E2 /* Gilroy-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD1E282831EF0075A6E2 /* Gilroy-SemiBoldItalic.otf */; };
+		0F92DD33282831F00075A6E2 /* Gilroy-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD1F282831EF0075A6E2 /* Gilroy-HeavyItalic.otf */; };
+		0F92DD34282831F00075A6E2 /* Gilroy-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD20282831EF0075A6E2 /* Gilroy-Thin.otf */; };
+		0F92DD35282831F00075A6E2 /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD21282831EF0075A6E2 /* Gilroy-Light.otf */; };
+		0F92DD36282831F00075A6E2 /* Gilroy-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD22282831EF0075A6E2 /* Gilroy-Bold.otf */; };
+		0F92DD37282831F00075A6E2 /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD23282831EF0075A6E2 /* Gilroy-ExtraBold.otf */; };
+		0F92DD38282831F00075A6E2 /* Gilroy-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD24282831EF0075A6E2 /* Gilroy-Black.otf */; };
+		0F92DD39282831F00075A6E2 /* Gilroy-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD25282831EF0075A6E2 /* Gilroy-LightItalic.otf */; };
+		0F92DD3A282831F00075A6E2 /* Gilroy-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD26282831EF0075A6E2 /* Gilroy-Medium.otf */; };
+		0F92DD3B282831F00075A6E2 /* Gilroy-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD27282831EF0075A6E2 /* Gilroy-ExtraBoldItalic.otf */; };
+		0F92DD3C282831F00075A6E2 /* Gilroy-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD28282831EF0075A6E2 /* Gilroy-BlackItalic.otf */; };
+		0F92DD3D282831F00075A6E2 /* Gilroy-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD29282831EF0075A6E2 /* Gilroy-RegularItalic.otf */; };
+		0F92DD3E282831F00075A6E2 /* Gilroy-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD2A282831F00075A6E2 /* Gilroy-Regular.otf */; };
+		0F92DD3F282831F00075A6E2 /* Gilroy-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD2B282831F00075A6E2 /* Gilroy-SemiBold.otf */; };
+		0F92DD40282831F00075A6E2 /* Gilroy-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD2C282831F00075A6E2 /* Gilroy-ThinItalic.otf */; };
+		0F92DD41282831F00075A6E2 /* Gilroy-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD2D282831F00075A6E2 /* Gilroy-UltraLight.otf */; };
+		0F92DD42282831F00075A6E2 /* Gilroy-UltraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD2E282831F00075A6E2 /* Gilroy-UltraLightItalic.otf */; };
+		0F92DD44282836F00075A6E2 /* UIFont+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F92DD43282836F00075A6E2 /* UIFont+Name.swift */; };
 		0FB70B7A2811A26100DFA48B /* ExportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FB70B792811A26100DFA48B /* ExportOptions.plist */; };
 		0FFD501027177E4B00F9563B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD500F27177E4B00F9563B /* Router.swift */; };
 		0FFD501227177EA900F9563B /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD501127177EA900F9563B /* RouterProtocol.swift */; };
@@ -135,6 +156,28 @@
 		0F7DCB8228247225006EF7B1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		0F7DCB842824722F006EF7B1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0F7DCB862824723C006EF7B1 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		0F92DD1A282831AD0075A6E2 /* beBetter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = beBetter.entitlements; sourceTree = "<group>"; };
+		0F92DD1B282831EF0075A6E2 /* Gilroy-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-BoldItalic.otf"; sourceTree = "<group>"; };
+		0F92DD1C282831EF0075A6E2 /* Gilroy-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Heavy.otf"; sourceTree = "<group>"; };
+		0F92DD1D282831EF0075A6E2 /* Gilroy-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-MediumItalic.otf"; sourceTree = "<group>"; };
+		0F92DD1E282831EF0075A6E2 /* Gilroy-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBoldItalic.otf"; sourceTree = "<group>"; };
+		0F92DD1F282831EF0075A6E2 /* Gilroy-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-HeavyItalic.otf"; sourceTree = "<group>"; };
+		0F92DD20282831EF0075A6E2 /* Gilroy-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Thin.otf"; sourceTree = "<group>"; };
+		0F92DD21282831EF0075A6E2 /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.otf"; sourceTree = "<group>"; };
+		0F92DD22282831EF0075A6E2 /* Gilroy-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.otf"; sourceTree = "<group>"; };
+		0F92DD23282831EF0075A6E2 /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.otf"; sourceTree = "<group>"; };
+		0F92DD24282831EF0075A6E2 /* Gilroy-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Black.otf"; sourceTree = "<group>"; };
+		0F92DD25282831EF0075A6E2 /* Gilroy-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-LightItalic.otf"; sourceTree = "<group>"; };
+		0F92DD26282831EF0075A6E2 /* Gilroy-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.otf"; sourceTree = "<group>"; };
+		0F92DD27282831EF0075A6E2 /* Gilroy-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
+		0F92DD28282831EF0075A6E2 /* Gilroy-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-BlackItalic.otf"; sourceTree = "<group>"; };
+		0F92DD29282831EF0075A6E2 /* Gilroy-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-RegularItalic.otf"; sourceTree = "<group>"; };
+		0F92DD2A282831F00075A6E2 /* Gilroy-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.otf"; sourceTree = "<group>"; };
+		0F92DD2B282831F00075A6E2 /* Gilroy-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.otf"; sourceTree = "<group>"; };
+		0F92DD2C282831F00075A6E2 /* Gilroy-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ThinItalic.otf"; sourceTree = "<group>"; };
+		0F92DD2D282831F00075A6E2 /* Gilroy-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-UltraLight.otf"; sourceTree = "<group>"; };
+		0F92DD2E282831F00075A6E2 /* Gilroy-UltraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-UltraLightItalic.otf"; sourceTree = "<group>"; };
+		0F92DD43282836F00075A6E2 /* UIFont+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Name.swift"; sourceTree = "<group>"; };
 		0FB70B792811A26100DFA48B /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
 		0FFD500F27177E4B00F9563B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0FFD501127177EA900F9563B /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
@@ -245,6 +288,7 @@
 		0F704E09270F9D08004B897F /* beBetter */ = {
 			isa = PBXGroup;
 			children = (
+				0F92DD1A282831AD0075A6E2 /* beBetter.entitlements */,
 				0F0CAEDA2827AF7B0009B04D /* Models */,
 				0F704E69270FAABA004B897F /* Navigation */,
 				0F704E66270FA814004B897F /* Scenes */,
@@ -277,6 +321,7 @@
 		0F704E3A270F9D3F004B897F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0F92DCF128282FB90075A6E2 /* Fonts */,
 				0F6F16592800C7F500F6B97E /* GoogleService-Info.plist */,
 				0F704E13270F9D09004B897F /* Assets.xcassets */,
 				0F704E15270F9D09004B897F /* LaunchScreen.storyboard */,
@@ -347,6 +392,7 @@
 				0F704E4D270F9EEE004B897F /* UINavigationItem+EmptyBack.swift */,
 				0F704E4F270F9F48004B897F /* UIColor+SemanticAssets.swift */,
 				0F0CAEDF2827B95B0009B04D /* UITextField+TextPublisher.swift */,
+				0F92DD43282836F00075A6E2 /* UIFont+Name.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -463,6 +509,33 @@
 				0F07C30D2827E4B800C18EE2 /* SignUpViewModel.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		0F92DCF128282FB90075A6E2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0F92DD24282831EF0075A6E2 /* Gilroy-Black.otf */,
+				0F92DD28282831EF0075A6E2 /* Gilroy-BlackItalic.otf */,
+				0F92DD22282831EF0075A6E2 /* Gilroy-Bold.otf */,
+				0F92DD1B282831EF0075A6E2 /* Gilroy-BoldItalic.otf */,
+				0F92DD23282831EF0075A6E2 /* Gilroy-ExtraBold.otf */,
+				0F92DD27282831EF0075A6E2 /* Gilroy-ExtraBoldItalic.otf */,
+				0F92DD1C282831EF0075A6E2 /* Gilroy-Heavy.otf */,
+				0F92DD1F282831EF0075A6E2 /* Gilroy-HeavyItalic.otf */,
+				0F92DD21282831EF0075A6E2 /* Gilroy-Light.otf */,
+				0F92DD25282831EF0075A6E2 /* Gilroy-LightItalic.otf */,
+				0F92DD26282831EF0075A6E2 /* Gilroy-Medium.otf */,
+				0F92DD1D282831EF0075A6E2 /* Gilroy-MediumItalic.otf */,
+				0F92DD2A282831F00075A6E2 /* Gilroy-Regular.otf */,
+				0F92DD29282831EF0075A6E2 /* Gilroy-RegularItalic.otf */,
+				0F92DD2B282831F00075A6E2 /* Gilroy-SemiBold.otf */,
+				0F92DD1E282831EF0075A6E2 /* Gilroy-SemiBoldItalic.otf */,
+				0F92DD20282831EF0075A6E2 /* Gilroy-Thin.otf */,
+				0F92DD2C282831F00075A6E2 /* Gilroy-ThinItalic.otf */,
+				0F92DD2D282831F00075A6E2 /* Gilroy-UltraLight.otf */,
+				0F92DD2E282831F00075A6E2 /* Gilroy-UltraLightItalic.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		0FFD500E27177E3B00F9563B /* Router */ = {
@@ -624,11 +697,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F92DD3E282831F00075A6E2 /* Gilroy-Regular.otf in Resources */,
+				0F92DD36282831F00075A6E2 /* Gilroy-Bold.otf in Resources */,
+				0F92DD42282831F00075A6E2 /* Gilroy-UltraLightItalic.otf in Resources */,
+				0F92DD3B282831F00075A6E2 /* Gilroy-ExtraBoldItalic.otf in Resources */,
+				0F92DD37282831F00075A6E2 /* Gilroy-ExtraBold.otf in Resources */,
+				0F92DD31282831F00075A6E2 /* Gilroy-MediumItalic.otf in Resources */,
+				0F92DD32282831F00075A6E2 /* Gilroy-SemiBoldItalic.otf in Resources */,
+				0F92DD35282831F00075A6E2 /* Gilroy-Light.otf in Resources */,
 				0F704E52270F9FF9004B897F /* Colors.xcassets in Resources */,
+				0F92DD3F282831F00075A6E2 /* Gilroy-SemiBold.otf in Resources */,
+				0F92DD34282831F00075A6E2 /* Gilroy-Thin.otf in Resources */,
 				0FB70B7A2811A26100DFA48B /* ExportOptions.plist in Resources */,
+				0F92DD3C282831F00075A6E2 /* Gilroy-BlackItalic.otf in Resources */,
+				0F92DD40282831F00075A6E2 /* Gilroy-ThinItalic.otf in Resources */,
+				0F92DD38282831F00075A6E2 /* Gilroy-Black.otf in Resources */,
+				0F92DD30282831F00075A6E2 /* Gilroy-Heavy.otf in Resources */,
+				0F92DD2F282831F00075A6E2 /* Gilroy-BoldItalic.otf in Resources */,
 				0F6F165A2800C7F500F6B97E /* GoogleService-Info.plist in Resources */,
+				0F92DD3A282831F00075A6E2 /* Gilroy-Medium.otf in Resources */,
 				0F704E17270F9D09004B897F /* LaunchScreen.storyboard in Resources */,
 				0F704E14270F9D09004B897F /* Assets.xcassets in Resources */,
+				0F92DD39282831F00075A6E2 /* Gilroy-LightItalic.otf in Resources */,
+				0F92DD3D282831F00075A6E2 /* Gilroy-RegularItalic.otf in Resources */,
+				0F92DD33282831F00075A6E2 /* Gilroy-HeavyItalic.otf in Resources */,
+				0F92DD41282831F00075A6E2 /* Gilroy-UltraLight.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +764,7 @@
 				0F0CAEDC2827B0080009B04D /* BaseViewModel.swift in Sources */,
 				0FFD5034271789CE00F9563B /* AccountViewController.swift in Sources */,
 				0F3378612826C94F0007D95A /* ResetPasswordView.swift in Sources */,
+				0F92DD44282836F00075A6E2 /* UIFont+Name.swift in Sources */,
 				0F07C3102827E93B00C18EE2 /* ResetPasswordViewModel.swift in Sources */,
 				0F704E0B270F9D08004B897F /* AppDelegate.swift in Sources */,
 				0FFD5036271789D800F9563B /* AccountView.swift in Sources */,
@@ -879,6 +973,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = beBetter/beBetter.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 2;
@@ -909,6 +1004,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = beBetter/beBetter.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 2;

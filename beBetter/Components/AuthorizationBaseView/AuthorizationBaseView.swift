@@ -6,7 +6,7 @@ open class AuthorizationBaseView: KeyboardAwareScrollContainerView {
         let style = NSMutableParagraphStyle()
         // converting sketch lineHeight to lineSpacing
         // from https://stackoverflow.com/a/53529751/6614480
-        let font: UIFont = UIFont.systemFont(ofSize: 16)//FontFamily.Gilroy.regular.font(size: 16)
+        let font = UIFont.customFont(name: .gilroyRegular, size: 16)
         style.lineSpacing = 23 - 16 - (font.lineHeight - font.pointSize)
         let attr = [NSAttributedString.Key.font: font as Any,
                     .foregroundColor: UIColor(.blackColor),
@@ -22,14 +22,14 @@ open class AuthorizationBaseView: KeyboardAwareScrollContainerView {
         imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor,
                                          multiplier: 48 / 50).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: 48).isActive = true
-        //imageView.image = Asset.elcoinBwLogo.image
+        imageView.image = UIImage(named: "logo")
         return imageView
     }()
 
     let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(.blackColor)
-        //label.font = FontFamily.Gilroy.bold.font(size: 28)
+        label.font = UIFont.customFont(name: .gilroyBold, size: 28)
         label.numberOfLines = 0
         label.textAlignment = .left
         return label
@@ -38,7 +38,7 @@ open class AuthorizationBaseView: KeyboardAwareScrollContainerView {
     let subtitleLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(.blackColor)
-        //label.font = FontFamily.Gilroy.regular.font(size: 16)
+        label.font = UIFont.customFont(name: .gilroyRegular, size: 16)
         label.numberOfLines = 0
         label.textAlignment = .left
         return label

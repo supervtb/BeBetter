@@ -17,7 +17,7 @@ final class LoginViewController: BaseViewController, CustomLoadedController {
                                      image: nil, primaryAction: UIAction(handler: { [unowned self] _ in
             self.stepSubject.send(.resetPassword)
         }))
-        button.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 16),
+        button.setTitleTextAttributes([.font: UIFont.customFont(name: .gilroyBold, size: 16),
                                                      .foregroundColor: UIColor(.blackColor)],
                                                     for: .normal)
         return button
