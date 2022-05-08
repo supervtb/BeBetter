@@ -4,7 +4,7 @@ import Combine
 final class ResetPasswordCoordinator: BaseCoordinator<Step> {
 
     lazy var viewController = {
-        return ResetPasswordViewController()
+        return ResetPasswordViewController(viewModel: ResetPasswordViewModel())
     }()
 
     override var source: UIViewController {

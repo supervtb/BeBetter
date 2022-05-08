@@ -29,6 +29,23 @@ final class ResetPasswordViewController: BaseViewController, CustomLoadedControl
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = closeButton
 
+        guard let viewModel = viewModel as? ResetPasswordViewModel else {
+            fatalError()
+        }
+
+        // Disable reset password button
+        _view.resetPasswordButton.isEnabled = false
+
+        // Bind email string to model
+        _view.emailTextField.textField.textPublisher.sink { val in
+            viewModel.email.send(val)
+        }.store(in: &bag)
+
+        // Subscribe to validation property and update reset password button state
+        viewModel.isEmailValidPublisher.sink { val in
+            self._view.resetPasswordButton.isEnabled = val
+        }.store(in: &bag)
+
         _view.onResetPassword = {
             self.resetPasswordSuccess()
                 .subscribe(self.stepSubject)
@@ -41,4 +58,3 @@ final class ResetPasswordViewController: BaseViewController, CustomLoadedControl
             .eraseToAnyPublisher()
     }
 }
-

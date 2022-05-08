@@ -29,6 +29,33 @@ final class SignUpViewController: BaseViewController, CustomLoadedController {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = closeButton
 
+        guard let viewModel = viewModel as? SignUpViewModel else {
+            fatalError()
+        }
+
+        // Disable signup button
+        _view.signUpButton.isEnabled = false
+
+        // Bind email string to model
+        _view.emailTextField.textField.textPublisher.sink { val in
+            viewModel.email.send(val)
+        }.store(in: &bag)
+
+        // Bind password string to model
+        _view.passwordTextField.textField.textPublisher.sink { val in
+            viewModel.password.send(val)
+        }.store(in: &bag)
+
+        // Bind confirm password string to model
+        _view.confirmPasswordTextField.textField.textPublisher.sink { val in
+            viewModel.confirmPassword.send(val)
+        }.store(in: &bag)
+
+        // Subscribe to validation property and update signup button state
+        viewModel.isSignUpValidPublisher.sink { val in
+            self._view.signUpButton.isEnabled = val
+        }.store(in: &bag)
+
         _view.onSignUp = {
             self.signUpSuccess()
                 .subscribe(self.stepSubject)

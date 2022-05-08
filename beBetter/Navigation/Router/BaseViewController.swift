@@ -3,7 +3,10 @@ import UIKit
 
 open class BaseViewController: UIViewController {
 
-    init() {
+    let viewModel: BaseViewModel
+
+    init(viewModel: BaseViewModel = BaseViewModel()) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 
