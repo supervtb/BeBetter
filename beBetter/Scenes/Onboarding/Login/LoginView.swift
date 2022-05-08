@@ -8,51 +8,21 @@ final class LoginView: AuthorizationBaseView {
 
     var onSignUp: (() -> Void)?
 
-    var onResetPassword: (() -> Void)?
-
-    private let contentStack: UIStackView = {
-        let vStack = UIStackView()
-        vStack.isLayoutMarginsRelativeArrangement = true
-        vStack.axis = .vertical
-        vStack.spacing = 16
-        vStack.distribution = .fill
-        vStack.alignment = .fill
-        return vStack
-    }()
-
-    private let headerContentStack: UIStackView = {
-        let vStack = UIStackView()
-        vStack.axis = .vertical
-        vStack.spacing = 12
-        vStack.distribution = .fill
-        vStack.alignment = .fill
-        return vStack
-    }()
-
-    private let fieldsStack: UIStackView = {
-        let vStack = UIStackView()
-        vStack.axis = .vertical
-        vStack.spacing = 12
-        vStack.distribution = .fill
-        vStack.alignment = .fill
-        return vStack
-    }()
-
     let emailTextField: FloatingLabelField = {
         let textField = BeBetterTextField()
-        textField.placeholder = "Email"
+        textField.placeholder = "Please enter your email"
         textField.keyboardType = .emailAddress
         let field = FloatingLabelField(textField: textField)
-        field.title = "Please enter your email"
+        field.title = "Email"
         return field
     }()
 
     let passwordTextField: FloatingLabelField = {
         let textField = BeBetterSecureTextField()
-        textField.placeholder = "Password"
-        textField.keyboardType = .emailAddress
+        textField.placeholder = "Please enter your password"
+        textField.keyboardType = .default
         let field = FloatingLabelField(textField: textField)
-        field.title = "Please enter your password"
+        field.title = "Password"
         return field
     }()
 
@@ -68,20 +38,39 @@ final class LoginView: AuthorizationBaseView {
         return button
     }()
 
-    let resetPasswordButton: PrimaryButton = {
-        let button = PrimaryButton(type: .system)
-        button.updateTitle("Reset password")
-        return button
+    private let fieldsStack: UIStackView = {
+        let vStack = UIStackView()
+        vStack.axis = .vertical
+        vStack.spacing = 12
+        vStack.distribution = .fill
+        vStack.alignment = .fill
+        return vStack
     }()
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-        setupActions()
-    }
+    private let contentStack: UIStackView = {
+        let vStack = UIStackView()
+        vStack.axis = .vertical
+        vStack.spacing = 16
+        vStack.distribution = .equalCentering
+        vStack.alignment = .fill
+        return vStack
+    }()
 
-    required public init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    private let buttonsContentStack: UIStackView = {
+        let hStack = UIStackView()
+        hStack.axis = .horizontal
+        hStack.spacing = 8
+        hStack.distribution = .fillEqually
+        hStack.alignment = .fill
+        return hStack
+    }()
+
+    override func updateContent() {
+        titleLabel.text = "Welcome to beBetter"
+        subtitleLabel.isHidden = true
+        subtitleLabel.text = nil
+
+        setupActions()
     }
 
     override func contentView() -> UIView {
@@ -89,25 +78,18 @@ final class LoginView: AuthorizationBaseView {
             fieldsStack.addArrangedSubview($0)
         }
 
-        [headerContentStack, fieldsStack, loginButton, signUpButton, resetPasswordButton, UIView()].forEach {
+        [loginButton, signUpButton].forEach {
+            buttonsContentStack.addArrangedSubview($0)
+        }
+        [fieldsStack, buttonsContentStack].forEach {
             contentStack.addArrangedSubview($0)
         }
-
         return contentStack
-    }
-
-    override func updateContent() {
-        titleLabel.text = "Login"
-    }
-
-    private func setup() {
-        backgroundColor = UIColor(.backgroundPrimary)
     }
 
     private func setupActions() {
         loginButton.addTarget(self, action: #selector(self.onLoginTapped), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(self.onSignUpTapped), for: .touchUpInside)
-        resetPasswordButton.addTarget(self, action: #selector(self.onResetPasswordTapped), for: .touchUpInside)
     }
 
     @objc private func onLoginTapped() {
@@ -116,9 +98,5 @@ final class LoginView: AuthorizationBaseView {
 
     @objc private func onSignUpTapped() {
         onSignUp?()
-    }
-
-    @objc private func onResetPasswordTapped() {
-        onResetPassword?()
     }
 }

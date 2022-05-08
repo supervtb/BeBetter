@@ -29,8 +29,8 @@ final class PrimaryButton: UIButton {
 
     // MARK: - Setup
     private func setup() {
-        backgroundColor = UIColor(.primary)
-        tintColor = UIColor(.backgroundPrimary)
+        backgroundColor = UIColor(.aquamarine)
+        tintColor = UIColor(.totalyWhite)
         layer.cornerRadius = Constants.cornerRadius
     }
 
