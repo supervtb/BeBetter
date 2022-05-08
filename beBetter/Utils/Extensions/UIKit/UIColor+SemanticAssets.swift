@@ -96,6 +96,18 @@ public extension UIColor {
         /// The color dedicated to the secondary icons
         case iconSecondary
 
+        case pinkishGrey
+
+        case totalyWhite
+
+        case navigationShadow
+
+        case blackColor
+
+        case whiteColor
+
+        case aquamarine
+
     }
 
 

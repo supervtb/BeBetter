@@ -15,6 +15,10 @@
 		0F3378612826C94F0007D95A /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3378602826C94F0007D95A /* ResetPasswordView.swift */; };
 		0F3378632826C9560007D95A /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3378622826C9560007D95A /* ResetPasswordViewController.swift */; };
 		0F3378652826C95C0007D95A /* ResetPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3378642826C95C0007D95A /* ResetPasswordCoordinator.swift */; };
+		0F47E4FE2827FF9300406546 /* TopNavigationStackContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F47E4FD2827FF9300406546 /* TopNavigationStackContainerView.swift */; };
+		0F47E5012827FFEC00406546 /* TopNavigationScrollableContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F47E5002827FFEC00406546 /* TopNavigationScrollableContainerView.swift */; };
+		0F47E5032828000D00406546 /* NavigationTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F47E5022828000D00406546 /* NavigationTopView.swift */; };
+		0F47E5052828002700406546 /* NavigationTopViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F47E5042828002700406546 /* NavigationTopViewContainer.swift */; };
 		0F6F165A2800C7F500F6B97E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F6F16592800C7F500F6B97E /* GoogleService-Info.plist */; };
 		0F704E0B270F9D08004B897F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E0A270F9D08004B897F /* AppDelegate.swift */; };
 		0F704E0D270F9D08004B897F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F704E0C270F9D08004B897F /* SceneDelegate.swift */; };
@@ -116,6 +120,10 @@
 		0F3378602826C94F0007D95A /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		0F3378622826C9560007D95A /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		0F3378642826C95C0007D95A /* ResetPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordCoordinator.swift; sourceTree = "<group>"; };
+		0F47E4FD2827FF9300406546 /* TopNavigationStackContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackContainerView.swift; sourceTree = "<group>"; };
+		0F47E5002827FFEC00406546 /* TopNavigationScrollableContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationScrollableContainerView.swift; sourceTree = "<group>"; };
+		0F47E5022828000D00406546 /* NavigationTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTopView.swift; sourceTree = "<group>"; };
+		0F47E5042828002700406546 /* NavigationTopViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTopViewContainer.swift; sourceTree = "<group>"; };
 		0F6F16592800C7F500F6B97E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F704E07270F9D08004B897F /* beBetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beBetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F704E0A270F9D08004B897F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -237,6 +245,24 @@
 				0F07C30F2827E93B00C18EE2 /* ResetPasswordViewModel.swift */,
 			);
 			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		0F47E4FC2827FF7D00406546 /* TopNavigationStackContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				0F47E4FD2827FF9300406546 /* TopNavigationStackContainerView.swift */,
+			);
+			path = TopNavigationStackContainerView;
+			sourceTree = "<group>";
+		};
+		0F47E4FF2827FFC200406546 /* NavigationBackgroundView */ = {
+			isa = PBXGroup;
+			children = (
+				0F47E5002827FFEC00406546 /* TopNavigationScrollableContainerView.swift */,
+				0F47E5022828000D00406546 /* NavigationTopView.swift */,
+				0F47E5042828002700406546 /* NavigationTopViewContainer.swift */,
+			);
+			path = NavigationBackgroundView;
 			sourceTree = "<group>";
 		};
 		0F704DFE270F9D08004B897F = {
@@ -370,6 +396,8 @@
 		0F704E53270FA38A004B897F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0F47E4FF2827FFC200406546 /* NavigationBackgroundView */,
+				0F47E4FC2827FF7D00406546 /* TopNavigationStackContainerView */,
 				0FFD503E2717A89100F9563B /* TransparentNavigationBar */,
 				0FFD503B2717A5A800F9563B /* HomeView */,
 				0F704E76270FC698004B897F /* AuthorizationBaseView */,
@@ -716,6 +744,7 @@
 				0FFD50282717842500F9563B /* TabBarCoordinator.swift in Sources */,
 				0F0CAEDE2827B1F40009B04D /* LoginViewModel.swift in Sources */,
 				0F7DCB852824722F006EF7B1 /* SignUpViewController.swift in Sources */,
+				0F47E5012827FFEC00406546 /* TopNavigationScrollableContainerView.swift in Sources */,
 				0F704E4A270F9EBC004B897F /* UIEdgeInsets+Equal.swift in Sources */,
 				0F704E4C270F9ED1004B897F /* CALayer+SketchShadow.swift in Sources */,
 				0F704E78270FC6A0004B897F /* AuthorizationBaseView.swift in Sources */,
@@ -740,10 +769,13 @@
 				0FFD50232717804400F9563B /* DemandableSubscriber.swift in Sources */,
 				0F704E0D270F9D08004B897F /* SceneDelegate.swift in Sources */,
 				0FFD502E2717854300F9563B /* HomeView.swift in Sources */,
+				0F47E5032828000D00406546 /* NavigationTopView.swift in Sources */,
 				0FFD503D2717A5CE00F9563B /* HomeTableViewCell.swift in Sources */,
 				0F7DCB872824723C006EF7B1 /* SignUpCoordinator.swift in Sources */,
+				0F47E5052828002700406546 /* NavigationTopViewContainer.swift in Sources */,
 				0FFD502C2717852600F9563B /* HomeViewController.swift in Sources */,
 				0FFD501027177E4B00F9563B /* Router.swift in Sources */,
+				0F47E4FE2827FF9300406546 /* TopNavigationStackContainerView.swift in Sources */,
 				0F704E50270F9F48004B897F /* UIColor+SemanticAssets.swift in Sources */,
 				0FFD50402717A89800F9563B /* TransparentNavigationBar.swift in Sources */,
 				0F07C30E2827E4B900C18EE2 /* SignUpViewModel.swift in Sources */,

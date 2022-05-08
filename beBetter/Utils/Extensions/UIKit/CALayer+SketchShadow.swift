@@ -3,18 +3,18 @@ import UIKit
 
 extension CALayer {
 
+    // swiftlint:disable identifier_name
     func applySketchShadow(
         color: UIColor,
         alpha: Float = 1,
-        xValue: CGFloat = 0,
-        yValue: CGFloat = 0,
+        x: CGFloat = 0,
+        y: CGFloat = 0,
         blur: CGFloat,
-        spread: CGFloat = 0
-    )
+        spread: CGFloat = 0)
     {
         shadowColor = color.cgColor
         shadowOpacity = alpha
-        shadowOffset = CGSize(width: xValue, height: yValue)
+        shadowOffset = CGSize(width: x, height: y)
         shadowRadius = blur / UIScreen.main.scale
         if spread == 0 {
             shadowPath = nil
@@ -26,10 +26,10 @@ extension CALayer {
     }
 
     func applyDefaultContainerShadow() {
-        applySketchShadow(color: UIColor.systemGray,
+        applySketchShadow(color: UIColor(.navigationShadow),
                           alpha: 0.5,
-                          xValue: 0,
-                          yValue: 0,
+                          x: 0,
+                          y: 0,
                           blur: 14,
                           spread: 0)
     }

@@ -11,17 +11,30 @@ final class LoginViewController: BaseViewController, CustomLoadedController {
 
     weak var coordinator: MainCoordinator?
 
+    lazy var forgotPasswordButton: UIBarButtonItem = {
+        let title = "Forgot password?"
+        let button = UIBarButtonItem(title: title,
+                                     image: nil, primaryAction: UIAction(handler: { [unowned self] _ in
+            self.stepSubject.send(.resetPassword)
+        }))
+        button.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 16),
+                                                     .foregroundColor: UIColor(.blackColor)],
+                                                    for: .normal)
+        return button
+    }()
+
     override func loadView() {
         view = LoginView()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupForgotPasswordButton()
 
         guard let viewModel = viewModel as? LoginViewModel else {
             fatalError()
         }
-
+        	
         // Disable login button
         _view.loginButton.isEnabled = false
 
@@ -51,16 +64,15 @@ final class LoginViewController: BaseViewController, CustomLoadedController {
         _view.onSignUp = {
             self.stepSubject.send(.signUp)
         }
-
-        // Handle reset password button action
-        _view.onResetPassword = {
-            self.stepSubject.send(.resetPassword)
-        }
     }
 
     private func loginSuccess() -> AnyPublisher<Step, Never> {
         Just(.loggedIn)
             .delay(for: .seconds(1), scheduler: RunLoop.main)
             .eraseToAnyPublisher()
+    }
+
+    private func setupForgotPasswordButton() {
+        navigationItem.rightBarButtonItem = forgotPasswordButton
     }
 }
