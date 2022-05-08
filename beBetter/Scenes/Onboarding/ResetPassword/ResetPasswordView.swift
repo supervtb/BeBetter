@@ -36,10 +36,10 @@ final class ResetPasswordView: AuthorizationBaseView {
 
     let emailTextField: FloatingLabelField = {
         let textField = BeBetterTextField()
-        textField.placeholder = "Email"
+        textField.placeholder = "Please enter your email"
         textField.keyboardType = .emailAddress
         let field = FloatingLabelField(textField: textField)
-        field.title = "Please enter your email"
+        field.title = "Email"
         return field
     }()
 
