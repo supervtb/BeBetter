@@ -6,6 +6,9 @@
 	<array>
 		<string>Gilroy-Bold.otf</string>
 		<string>Gilroy-Regular.otf</string>
+		<string>Gilroy-SemiBold.otf</string>
+		<string>Gilroy-SemiBoldItalic.otf</string>
+		<string>Gilroy-Medium.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

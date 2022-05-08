@@ -7,6 +7,12 @@ public extension UIFont {
         case gilroyBold = "Gilroy-Bold"
 
         case gilroyRegular = "Gilroy-Regular"
+
+        case gilroySemiBold = "Gilroy-SemiBold"
+
+        case gilroySemiBoldItalic = "Gilroy-SemiBoldItalic"
+
+        case gilroyMedium = "Gilroy-Medium"
     }
 
     static func customFont(name: FontName, size: CGFloat) -> UIFont {

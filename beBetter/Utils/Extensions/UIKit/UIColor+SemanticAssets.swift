@@ -110,6 +110,8 @@ public extension UIColor {
 
         case lightPeach
 
+        case robinSEggBlue
+
     }
 
 

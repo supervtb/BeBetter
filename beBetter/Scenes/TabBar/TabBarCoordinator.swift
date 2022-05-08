@@ -17,7 +17,12 @@ final class TabBarCoordinator: BaseCoordinator<Void> {
 
     let tabs: [Tab]
 
-    let tabbarController = UITabBarController()
+    let tabbarController: UITabBarController = {
+        let controller = UITabBarController()
+        controller.tabBar.unselectedItemTintColor = UIColor(.robinSEggBlue)
+        controller.tabBar.tintColor = UIColor(.aquamarine)
+        return controller
+    }()
 
     override var source: UIViewController {
         get { tabbarController }

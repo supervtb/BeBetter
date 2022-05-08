@@ -28,7 +28,7 @@ class FloatingLabelField: UIView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         // font
-        //label.font = FontFamily.Gilroy.medium.font(size: 12)
+        label.font = UIFont.customFont(name: .gilroyMedium, size: 12)
         return label
     }()
 

@@ -4,11 +4,11 @@ class HomeTableViewCell: UITableViewCell {
 
     static var reuseIdentifier = "HomeTableViewCell"
 
-    private let bookIconName = "book"
+    private let leftIconName = "note.text"
 
     let cellView: UIView = {
         let view = UIView(frame: .zero)
-        view.backgroundColor = UIColor(.primary)
+        view.backgroundColor = UIColor(.totalyWhite)
         view.layer.cornerRadius = 8
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.applyDefaultContainerShadow()
@@ -19,7 +19,8 @@ class HomeTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textColor = UIColor.black
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 1
+        label.numberOfLines = 3
+        label.font = UIFont.customFont(name: .gilroyMedium, size: 16)
         return label
     }()
 
@@ -73,7 +74,7 @@ class HomeTableViewCell: UITableViewCell {
     }
 
     private func prepareIcon() {
-        iconImageView.image = UIImage(systemName: bookIconName)
+        iconImageView.image = UIImage(systemName: leftIconName)
     }
 
     func didSelectCell() {

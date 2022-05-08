@@ -19,7 +19,7 @@ public class NavigationTopView: UIView {
     static func subtitleLabel() -> UILabel {
         let label = UILabel()
         label.textColor = UIColor(.pinkishGrey)
-        //label.font = FontFamily.Gilroy.medium.font(size: 14)
+        label.font = UIFont.customFont(name: .gilroyMedium, size: 14)
         return label
     }
 
