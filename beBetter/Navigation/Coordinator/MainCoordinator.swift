@@ -19,7 +19,10 @@ class MainCoordinator: BaseCoordinator<Void> {
     }
 
     private func startSplash() {
-        let coordinator = LoginCoordinator(presenting: NavigationController())
+        let coordinator = LoginCoordinator(presenting: NavigationController(
+            navigationBarClass: TransparentNavigationBar.self,
+            toolbarClass: nil)
+        )
         setRoot(to: coordinator, into: window)
             .sink { [unowned self] _ in
                 self.startTabBar()

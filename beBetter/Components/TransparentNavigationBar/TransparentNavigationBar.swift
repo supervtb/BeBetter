@@ -28,7 +28,7 @@ public class TransparentNavigationBar: UINavigationBar {
         /*
          Other
          */
-        let baseColor = UIColor.yellow
+        let baseColor = UIColor(.blackColor)
         tintColor = baseColor
 //        prefersLargeTitles = true
 

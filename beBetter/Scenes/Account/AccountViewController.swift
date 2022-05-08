@@ -20,7 +20,6 @@ final class AccountViewController: BaseViewController, CustomLoadedController {
                                      image: nil, primaryAction: UIAction(handler: { [unowned self] _ in
             self.logoutSubject.send(true)
         }))
-
         return button
     }()
 

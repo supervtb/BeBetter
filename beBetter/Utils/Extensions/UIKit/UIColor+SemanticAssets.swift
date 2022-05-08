@@ -108,6 +108,8 @@ public extension UIColor {
 
         case aquamarine
 
+        case lightPeach
+
     }
 
 

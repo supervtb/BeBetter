@@ -18,7 +18,7 @@ final class LoginView: AuthorizationBaseView {
     }()
 
     let passwordTextField: FloatingLabelField = {
-        let textField = BeBetterTextField()
+        let textField = BeBetterSecureTextField()
         textField.placeholder = "Please enter your password"
         textField.keyboardType = .default
         let field = FloatingLabelField(textField: textField)

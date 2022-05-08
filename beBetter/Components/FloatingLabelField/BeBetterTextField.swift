@@ -37,7 +37,7 @@ final class BeBetterSecureTextField: BeBetterTextField {
     private func setupRightView() {
         rightView = eyeButton
         rightViewMode = .always
-        eyeButton.tintColor = UIColor.black
+        eyeButton.tintColor = UIColor(.aquamarine)
         eyeButton.addTarget(self,
                             action: #selector(onButtonTap(_:)),
                             for: .touchUpInside)
@@ -54,8 +54,9 @@ final class BeBetterSecureTextField: BeBetterTextField {
     }
 
     private func updateImage() {
-        // set private img
-//        eyeButton.setImage(isSecureTextEntry ? Asset.eyeOn.image : Asset.eyeOff.image,
-//                           for: .normal)
+        eyeButton.setImage(
+            isSecureTextEntry ? UIImage(systemName: "eye") : UIImage(systemName: "eye.slash"),
+            for: .normal
+        )
     }
 }
