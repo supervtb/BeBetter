@@ -36,7 +36,7 @@ public class NavigationTopView: UIView {
     }
 
     static func titleString(from originalString: String) -> NSAttributedString {
-        let attr = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24),//FontFamily.Gilroy.bold.font(size: 24) as Any,
+        let attr = [NSAttributedString.Key.font: UIFont.customFont(name: .gilroyBold, size: 24) as Any,
                     .foregroundColor: UIColor(.blackColor),
                     .kern: CGFloat(-0.55)] as [NSAttributedString.Key : Any]
         let attrString = NSAttributedString(string: originalString,

@@ -31,12 +31,17 @@ final class PrimaryButton: UIButton {
     private func setup() {
         backgroundColor = UIColor(.aquamarine)
         tintColor = UIColor(.totalyWhite)
+        setTitleColor(UIColor(.whiteColor), for: .disabled)
+        setTitleColor(UIColor(.totalyWhite), for: .normal)
         layer.cornerRadius = Constants.cornerRadius
     }
 
     // MARK: - Updates
     func updateTitle(_ newTitle: String) {
-        self.setTitle(newTitle, for: .normal)
+        let font = UIFont.customFont(name: .gilroyBold, size: 18)
+        let attrString = NSAttributedString(string: newTitle,
+                                            attributes: [.font: font as Any])
+        self.setAttributedTitle(attrString, for: .normal)
     }
 
     // MARK: - Overrides
@@ -46,4 +51,3 @@ final class PrimaryButton: UIButton {
                       height: max(superSize.height, Constants.minimumHeight))
     }
 }
-

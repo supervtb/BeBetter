@@ -36,28 +36,28 @@ final class SignUpView: AuthorizationBaseView {
 
     let emailTextField: FloatingLabelField = {
         let textField = BeBetterTextField()
-        textField.placeholder = "Email"
+        textField.placeholder = "Please enter your email"
         textField.keyboardType = .emailAddress
         let field = FloatingLabelField(textField: textField)
-        field.title = "Please enter your email"
+        field.title = "Email"
         return field
     }()
 
     let passwordTextField: FloatingLabelField = {
         let textField = BeBetterSecureTextField()
-        textField.placeholder = "Password"
+        textField.placeholder = "Please enter your password"
         textField.keyboardType = .default
         let field = FloatingLabelField(textField: textField)
-        field.title = "Please enter your password"
+        field.title = "Password"
         return field
     }()
 
     let confirmPasswordTextField: FloatingLabelField = {
         let textField = BeBetterSecureTextField()
-        textField.placeholder = "Confirm password"
+        textField.placeholder = "Please enter your password again"
         textField.keyboardType = .default
         let field = FloatingLabelField(textField: textField)
-        field.title = "Please enter your password again"
+        field.title = "Confirm password"
         return field
     }()
 
