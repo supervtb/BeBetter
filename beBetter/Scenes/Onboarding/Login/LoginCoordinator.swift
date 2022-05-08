@@ -4,7 +4,7 @@ import Combine
 final class LoginCoordinator: BaseCoordinator<Void> {
 
     lazy var viewController = {
-        return LoginViewController()
+        return LoginViewController(viewModel: LoginViewModel())
     }()
 
     override var source: UIViewController {

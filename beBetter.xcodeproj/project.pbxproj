@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F07C30E2827E4B900C18EE2 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F07C30D2827E4B800C18EE2 /* SignUpViewModel.swift */; };
+		0F07C3102827E93B00C18EE2 /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F07C30F2827E93B00C18EE2 /* ResetPasswordViewModel.swift */; };
+		0F0CAEDC2827B0080009B04D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CAEDB2827B0080009B04D /* BaseViewModel.swift */; };
+		0F0CAEDE2827B1F40009B04D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CAEDD2827B1F40009B04D /* LoginViewModel.swift */; };
+		0F0CAEE02827B95B0009B04D /* UITextField+TextPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CAEDF2827B95B0009B04D /* UITextField+TextPublisher.swift */; };
 		0F3378612826C94F0007D95A /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3378602826C94F0007D95A /* ResetPasswordView.swift */; };
 		0F3378632826C9560007D95A /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3378622826C9560007D95A /* ResetPasswordViewController.swift */; };
 		0F3378652826C95C0007D95A /* ResetPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3378642826C95C0007D95A /* ResetPasswordCoordinator.swift */; };
@@ -103,6 +108,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F07C30D2827E4B800C18EE2 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		0F07C30F2827E93B00C18EE2 /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
+		0F0CAEDB2827B0080009B04D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		0F0CAEDD2827B1F40009B04D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		0F0CAEDF2827B95B0009B04D /* UITextField+TextPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+TextPublisher.swift"; sourceTree = "<group>"; };
 		0F3378602826C94F0007D95A /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		0F3378622826C9560007D95A /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		0F3378642826C95C0007D95A /* ResetPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordCoordinator.swift; sourceTree = "<group>"; };
@@ -211,12 +221,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F0CAEDA2827AF7B0009B04D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0F33785F2826C9360007D95A /* ResetPassword */ = {
 			isa = PBXGroup;
 			children = (
 				0F3378602826C94F0007D95A /* ResetPasswordView.swift */,
 				0F3378622826C9560007D95A /* ResetPasswordViewController.swift */,
 				0F3378642826C95C0007D95A /* ResetPasswordCoordinator.swift */,
+				0F07C30F2827E93B00C18EE2 /* ResetPasswordViewModel.swift */,
 			);
 			path = ResetPassword;
 			sourceTree = "<group>";
@@ -243,6 +261,7 @@
 		0F704E09270F9D08004B897F /* beBetter */ = {
 			isa = PBXGroup;
 			children = (
+				0F0CAEDA2827AF7B0009B04D /* Models */,
 				0F704E69270FAABA004B897F /* Navigation */,
 				0F704E66270FA814004B897F /* Scenes */,
 				0F704E53270FA38A004B897F /* Components */,
@@ -343,6 +362,7 @@
 				0F704E4B270F9ED1004B897F /* CALayer+SketchShadow.swift */,
 				0F704E4D270F9EEE004B897F /* UINavigationItem+EmptyBack.swift */,
 				0F704E4F270F9F48004B897F /* UIColor+SemanticAssets.swift */,
+				0F0CAEDF2827B95B0009B04D /* UITextField+TextPublisher.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -409,6 +429,7 @@
 				0F704E6F270FAF48004B897F /* LoginViewController.swift */,
 				0F704E71270FAF86004B897F /* LoginView.swift */,
 				0FFD5024271780B300F9563B /* LoginCoordinator.swift */,
+				0F0CAEDD2827B1F40009B04D /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -453,6 +474,7 @@
 				0F7DCB8228247225006EF7B1 /* SignUpView.swift */,
 				0F7DCB842824722F006EF7B1 /* SignUpViewController.swift */,
 				0F7DCB862824723C006EF7B1 /* SignUpCoordinator.swift */,
+				0F07C30D2827E4B800C18EE2 /* SignUpViewModel.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -467,6 +489,7 @@
 				0FFD501727177F2300F9563B /* ReleaseHandler.swift */,
 				0FFD501927177F4E00F9563B /* BaseViewController.swift */,
 				0FFD5039271796CF00F9563B /* Step.swift */,
+				0F0CAEDB2827B0080009B04D /* BaseViewModel.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -684,11 +707,14 @@
 			files = (
 				0FFD5025271780B300F9563B /* LoginCoordinator.swift in Sources */,
 				0F704E63270FA4D3004B897F /* UITextField+CaretPosition.swift in Sources */,
+				0F0CAEDC2827B0080009B04D /* BaseViewModel.swift in Sources */,
 				0FFD5034271789CE00F9563B /* AccountViewController.swift in Sources */,
 				0F3378612826C94F0007D95A /* ResetPasswordView.swift in Sources */,
+				0F07C3102827E93B00C18EE2 /* ResetPasswordViewModel.swift in Sources */,
 				0F704E0B270F9D08004B897F /* AppDelegate.swift in Sources */,
 				0FFD5036271789D800F9563B /* AccountView.swift in Sources */,
 				0FFD50282717842500F9563B /* TabBarCoordinator.swift in Sources */,
+				0F0CAEDE2827B1F40009B04D /* LoginViewModel.swift in Sources */,
 				0F7DCB852824722F006EF7B1 /* SignUpViewController.swift in Sources */,
 				0F704E4A270F9EBC004B897F /* UIEdgeInsets+Equal.swift in Sources */,
 				0F704E4C270F9ED1004B897F /* CALayer+SketchShadow.swift in Sources */,
@@ -706,6 +732,7 @@
 				0F704E6C270FAAD1004B897F /* Coordinator.swift in Sources */,
 				0FFD5038271789E500F9563B /* AccountCoordinator.swift in Sources */,
 				0FFD501627177F0700F9563B /* UINavigationController+Combine.swift in Sources */,
+				0F0CAEE02827B95B0009B04D /* UITextField+TextPublisher.swift in Sources */,
 				0F704E48270F9EA6004B897F /* UIView+Anchors.swift in Sources */,
 				0F704E40270F9E38004B897F /* CustomLoadedController.swift in Sources */,
 				0F704E75270FC092004B897F /* PrimaryButton.swift in Sources */,
@@ -719,6 +746,7 @@
 				0FFD501027177E4B00F9563B /* Router.swift in Sources */,
 				0F704E50270F9F48004B897F /* UIColor+SemanticAssets.swift in Sources */,
 				0FFD50402717A89800F9563B /* TransparentNavigationBar.swift in Sources */,
+				0F07C30E2827E4B900C18EE2 /* SignUpViewModel.swift in Sources */,
 				0FFD501D27177FB500F9563B /* Combine+Lock.swift in Sources */,
 				0FFD501F27177FC900F9563B /* Combine+Util.swift in Sources */,
 				0F704E72270FAF86004B897F /* LoginView.swift in Sources */,
