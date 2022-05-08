@@ -46,7 +46,7 @@ final class SignUpView: AuthorizationBaseView {
     let passwordTextField: FloatingLabelField = {
         let textField = BeBetterSecureTextField()
         textField.placeholder = "Password"
-        textField.keyboardType = .emailAddress
+        textField.keyboardType = .default
         let field = FloatingLabelField(textField: textField)
         field.title = "Please enter your password"
         return field
@@ -55,7 +55,7 @@ final class SignUpView: AuthorizationBaseView {
     let confirmPasswordTextField: FloatingLabelField = {
         let textField = BeBetterSecureTextField()
         textField.placeholder = "Confirm password"
-        textField.keyboardType = .emailAddress
+        textField.keyboardType = .default
         let field = FloatingLabelField(textField: textField)
         field.title = "Please enter your password again"
         return field
