@@ -64,8 +64,8 @@ final class LoginViewController: BaseViewController, CustomLoadedController {
         }.store(in: &bag)
 
         // Handle login error
-        viewModel.isError.sink { _ in
-            print("User can not login")
+        viewModel.isError.sink { errorMessage in
+            print(errorMessage)
         }.store(in: &bag)
 
         // Handle signup button action

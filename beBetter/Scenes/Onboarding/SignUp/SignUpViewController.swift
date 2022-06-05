@@ -67,8 +67,8 @@ final class SignUpViewController: BaseViewController, CustomLoadedController {
         }.store(in: &bag)
 
         // Handle sign up error
-        viewModel.isError.sink { _ in
-            print("User can not sign up")
+        viewModel.isError.sink { error in
+            print(error)
         }.store(in: &bag)
     }
 }

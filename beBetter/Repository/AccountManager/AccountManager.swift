@@ -6,7 +6,7 @@ import FirebaseAuthCombineSwift
 
 public protocol AccountManagerType: Any {
 
-    var authenticationState: PassthroughSubject<User?, Error> { get }
+    var authenticationState: PassthroughSubject<AuthenticationState, Error> { get }
 
     func doSignIn(email: String, password: String)
 
@@ -15,7 +15,7 @@ public protocol AccountManagerType: Any {
 
 final class AccountManager: AccountManagerType {
 
-    let authenticationState = PassthroughSubject<User?, Error>()
+    let authenticationState = PassthroughSubject<AuthenticationState, Error>()
 
     var bag = Set<AnyCancellable>()
 
@@ -27,10 +27,10 @@ final class AccountManager: AccountManagerType {
                 switch completion {
                 case .finished: print("🏁 finished")
                 case .failure(let error):
-                    self?.authenticationState.send(completion: .failure(error))
+                    self?.authenticationState.send(.none(error.localizedDescription))
                 }
             } receiveValue: { [weak self] user in
-                self?.authenticationState.send(UserImpl(userId: user.user.uid, userName: user.user.email ?? ""))
+                self?.authenticationState.send(.user(UserImpl(userId: user.user.uid, userName: user.user.email ?? "")))
             }.store(in: &bag)
     }
 
@@ -40,10 +40,10 @@ final class AccountManager: AccountManagerType {
                 switch completion {
                 case .finished: print("🏁 finished")
                 case .failure(let error):
-                    self?.authenticationState.send(completion: .failure(error))
+                    self?.authenticationState.send(.none(error.localizedDescription))
                 }
             } receiveValue: { [weak self] user in
-                self?.authenticationState.send(UserImpl(userId: user.user.uid, userName: user.user.email ?? ""))
+                self?.authenticationState.send(.user(UserImpl(userId: user.user.uid, userName: user.user.email ?? "")))
             }.store(in: &bag)
     }
 }

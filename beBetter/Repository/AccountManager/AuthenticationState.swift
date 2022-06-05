@@ -1,3 +1,3 @@
-enum AuthenticationState {
-    case none, user(User)
+public enum AuthenticationState {
+    case none(String), user(User)
 }

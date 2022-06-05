@@ -12,8 +12,8 @@ final class SignUpViewModel: BaseViewModel {
     private(set) var confirmPassword = CurrentValueSubject<String, Never>("")
 
     let isSuccess = PassthroughSubject<Void, Never>()
-    
-    let isError = PassthroughSubject<Void, Never>()
+
+    let isError = PassthroughSubject<String, Never>()
 
     private var isEmailValidPublisher: AnyPublisher<Bool, Never> {
         email
@@ -62,10 +62,13 @@ final class SignUpViewModel: BaseViewModel {
     }
 
     private func setObservers() {
-        accountManagerProvider.authenticationState.sink { error in
-            self.isError.send()
-        } receiveValue: { user in
-            self.isSuccess.send()
+        accountManagerProvider.authenticationState.sink { _ in } receiveValue: { state in
+            switch state {
+            case .none(let error):
+                self.isError.send(error)
+            default:
+                self.isSuccess.send()
+            }
         }.store(in: &bag)
     }
 
