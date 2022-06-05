@@ -1,9 +1,19 @@
 import Combine
 import Foundation
+import FirebaseAuth
+import FirebaseAuthCombineSwift
 
 final class LoginViewModel: BaseViewModel {
-    private(set) var email = PassthroughSubject<String, Never>()
-    private(set) var password = PassthroughSubject<String, Never>()
+
+    let accountManagerProvider: AccountManagerType
+
+    private(set) var email = CurrentValueSubject<String, Never>("")
+
+    private(set) var password = CurrentValueSubject<String, Never>("")
+
+    let isSuccess = PassthroughSubject<Void, Never>()
+    
+    let isError = PassthroughSubject<Void, Never>()
 
     private var isEmailValidPublisher: AnyPublisher<Bool, Never> {
         email
@@ -24,7 +34,22 @@ final class LoginViewModel: BaseViewModel {
         .eraseToAnyPublisher()
     }
 
-    func signIn() {
+    init(accountProvider: AccountManagerType) {
+        self.accountManagerProvider = accountProvider
+        super.init()
+        self.setObservers()
 
+    }
+
+    private func setObservers() {
+        accountManagerProvider.authenticationState.sink { error in
+            self.isError.send()
+        } receiveValue: { user in
+            self.isSuccess.send()
+        }.store(in: &bag)
+    }
+
+    func doLogin() {
+        accountManagerProvider.doSignIn(email: email.value, password: password.value)
     }
 }

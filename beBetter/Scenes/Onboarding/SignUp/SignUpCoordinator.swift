@@ -3,8 +3,9 @@ import Combine
 
 final class SignUpCoordinator: BaseCoordinator<Step> {
 
-    lazy var viewController = {
-        return SignUpViewController(viewModel: SignUpViewModel())
+    lazy var viewController = { () -> SignUpViewController in
+        let model = SignUpViewModel(accountProvider: dependencies.accountManager)
+        return SignUpViewController(viewModel: model)
     }()
 
     override var source: UIViewController {

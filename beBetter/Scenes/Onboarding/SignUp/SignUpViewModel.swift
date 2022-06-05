@@ -2,9 +2,18 @@ import Combine
 import Foundation
 
 final class SignUpViewModel: BaseViewModel {
-    private(set) var email = PassthroughSubject<String, Never>()
-    private(set) var password = PassthroughSubject<String, Never>()
-    private(set) var confirmPassword = PassthroughSubject<String, Never>()
+
+    let accountManagerProvider: AccountManagerType
+
+    private(set) var email = CurrentValueSubject<String, Never>("")
+
+    private(set) var password = CurrentValueSubject<String, Never>("")
+
+    private(set) var confirmPassword = CurrentValueSubject<String, Never>("")
+
+    let isSuccess = PassthroughSubject<Void, Never>()
+    
+    let isError = PassthroughSubject<Void, Never>()
 
     private var isEmailValidPublisher: AnyPublisher<Bool, Never> {
         email
@@ -45,7 +54,22 @@ final class SignUpViewModel: BaseViewModel {
         .eraseToAnyPublisher()
     }
 
-    func signUp() {
+    init(accountProvider: AccountManagerType) {
+        self.accountManagerProvider = accountProvider
+        super.init()
+        self.setObservers()
 
+    }
+
+    private func setObservers() {
+        accountManagerProvider.authenticationState.sink { error in
+            self.isError.send()
+        } receiveValue: { user in
+            self.isSuccess.send()
+        }.store(in: &bag)
+    }
+
+    func doSignUp() {
+        accountManagerProvider.doSignUp(email: email.value, password: password.value)
     }
 }

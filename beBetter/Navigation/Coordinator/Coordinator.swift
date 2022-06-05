@@ -9,6 +9,8 @@ public protocol Coordinator: class, RoutableProtocol {
 
     var identifier: UUID { get }
 
+    var dependencies: DependencyContainer { get }
+
     func start() -> AnyPublisher<CoordinationResult, Never>
 }
 
@@ -23,11 +25,17 @@ open class BaseCoordinator<Result>: NSObject, Coordinator {
 
     public let router: Router
 
+    public var dependencies: DependencyContainer
+
     public var source: UIViewController {
         fatalError("must override this")
     }
 
-    init(presenting navigationController: NavigationControllerReleaseHandler) {
+    init(
+        presenting navigationController: NavigationControllerReleaseHandler,
+        dependencies: DependencyContainer = DefaultDependencyContainer()
+    ) {
+        self.dependencies = dependencies
         self.router = Router(navigationController: navigationController)
     }
 

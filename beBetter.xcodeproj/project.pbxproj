@@ -9,9 +9,16 @@
 /* Begin PBXBuildFile section */
 		0F07C30E2827E4B900C18EE2 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F07C30D2827E4B800C18EE2 /* SignUpViewModel.swift */; };
 		0F07C3102827E93B00C18EE2 /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F07C30F2827E93B00C18EE2 /* ResetPasswordViewModel.swift */; };
+		0F0A1F37284CF116001AFEF4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0F0A1F36284CF116001AFEF4 /* FirebaseAuth */; };
+		0F0A1F39284CF116001AFEF4 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 0F0A1F38284CF116001AFEF4 /* FirebaseAuthCombine-Community */; };
 		0F0CAEDC2827B0080009B04D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CAEDB2827B0080009B04D /* BaseViewModel.swift */; };
 		0F0CAEDE2827B1F40009B04D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CAEDD2827B1F40009B04D /* LoginViewModel.swift */; };
 		0F0CAEE02827B95B0009B04D /* UITextField+TextPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CAEDF2827B95B0009B04D /* UITextField+TextPublisher.swift */; };
+		0F0F0A612828FCD4008C3EFE /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0F0A602828FCD4008C3EFE /* DependencyContainer.swift */; };
+		0F0F0A632828FCE8008C3EFE /* DefaultDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0F0A622828FCE8008C3EFE /* DefaultDependencyContainer.swift */; };
+		0F0F0A672828FE59008C3EFE /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0F0A662828FE59008C3EFE /* AuthenticationState.swift */; };
+		0F0F0A692828FE6B008C3EFE /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0F0A682828FE6B008C3EFE /* AccountManager.swift */; };
+		0F0F0A6B2828FE88008C3EFE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0F0A6A2828FE88008C3EFE /* User.swift */; };
 		0F3378612826C94F0007D95A /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3378602826C94F0007D95A /* ResetPasswordView.swift */; };
 		0F3378632826C9560007D95A /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3378622826C9560007D95A /* ResetPasswordViewController.swift */; };
 		0F3378652826C95C0007D95A /* ResetPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3378642826C95C0007D95A /* ResetPasswordCoordinator.swift */; };
@@ -113,6 +120,11 @@
 		0F0CAEDB2827B0080009B04D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		0F0CAEDD2827B1F40009B04D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0F0CAEDF2827B95B0009B04D /* UITextField+TextPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+TextPublisher.swift"; sourceTree = "<group>"; };
+		0F0F0A602828FCD4008C3EFE /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		0F0F0A622828FCE8008C3EFE /* DefaultDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDependencyContainer.swift; sourceTree = "<group>"; };
+		0F0F0A662828FE59008C3EFE /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
+		0F0F0A682828FE6B008C3EFE /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		0F0F0A6A2828FE88008C3EFE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0F3378602826C94F0007D95A /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		0F3378622826C9560007D95A /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		0F3378642826C95C0007D95A /* ResetPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordCoordinator.swift; sourceTree = "<group>"; };
@@ -208,7 +220,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F48A0572828258C0090AAEE /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				0F0A1F37284CF116001AFEF4 /* FirebaseAuth in Frameworks */,
 				0F48A059282825930090AAEE /* FirebaseAppDistribution-Beta in Frameworks */,
+				0F0A1F39284CF116001AFEF4 /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +241,24 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0F0F0A642828FE3F008C3EFE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				0F0F0A652828FE4A008C3EFE /* AccountManager */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		0F0F0A652828FE4A008C3EFE /* AccountManager */ = {
+			isa = PBXGroup;
+			children = (
+				0F0F0A662828FE59008C3EFE /* AuthenticationState.swift */,
+				0F0F0A682828FE6B008C3EFE /* AccountManager.swift */,
+				0F0F0A6A2828FE88008C3EFE /* User.swift */,
+			);
+			path = AccountManager;
 			sourceTree = "<group>";
 		};
 		0F33785F2826C9360007D95A /* ResetPassword */ = {
@@ -288,6 +320,7 @@
 		0F704E09270F9D08004B897F /* beBetter */ = {
 			isa = PBXGroup;
 			children = (
+				0F0F0A642828FE3F008C3EFE /* Repository */,
 				0F92DD1A282831AD0075A6E2 /* beBetter.entitlements */,
 				0F0CAEDA2827AF7B0009B04D /* Models */,
 				0F704E69270FAABA004B897F /* Navigation */,
@@ -344,6 +377,8 @@
 		0F704E3C270F9DB7004B897F /* DepenndencyContainer */ = {
 			isa = PBXGroup;
 			children = (
+				0F0F0A602828FCD4008C3EFE /* DependencyContainer.swift */,
+				0F0F0A622828FCE8008C3EFE /* DefaultDependencyContainer.swift */,
 			);
 			path = DepenndencyContainer;
 			sourceTree = "<group>";
@@ -628,6 +663,8 @@
 			packageProductDependencies = (
 				0F48A0562828258C0090AAEE /* FirebaseAnalyticsWithoutAdIdSupport */,
 				0F48A058282825930090AAEE /* FirebaseAppDistribution-Beta */,
+				0F0A1F36284CF116001AFEF4 /* FirebaseAuth */,
+				0F0A1F38284CF116001AFEF4 /* FirebaseAuthCombine-Community */,
 			);
 			productName = beBetter;
 			productReference = 0F704E07270F9D08004B897F /* beBetter.app */;
@@ -772,6 +809,7 @@
 				0F0CAEDE2827B1F40009B04D /* LoginViewModel.swift in Sources */,
 				0F7DCB852824722F006EF7B1 /* SignUpViewController.swift in Sources */,
 				0F47E5012827FFEC00406546 /* TopNavigationScrollableContainerView.swift in Sources */,
+				0F0F0A6B2828FE88008C3EFE /* User.swift in Sources */,
 				0F704E4A270F9EBC004B897F /* UIEdgeInsets+Equal.swift in Sources */,
 				0F704E4C270F9ED1004B897F /* CALayer+SketchShadow.swift in Sources */,
 				0F704E78270FC6A0004B897F /* AuthorizationBaseView.swift in Sources */,
@@ -787,6 +825,7 @@
 				0FFD503A271796CF00F9563B /* Step.swift in Sources */,
 				0F704E6C270FAAD1004B897F /* Coordinator.swift in Sources */,
 				0FFD5038271789E500F9563B /* AccountCoordinator.swift in Sources */,
+				0F0F0A632828FCE8008C3EFE /* DefaultDependencyContainer.swift in Sources */,
 				0FFD501627177F0700F9563B /* UINavigationController+Combine.swift in Sources */,
 				0F0CAEE02827B95B0009B04D /* UITextField+TextPublisher.swift in Sources */,
 				0F704E48270F9EA6004B897F /* UIView+Anchors.swift in Sources */,
@@ -795,6 +834,7 @@
 				0F704E4E270F9EEE004B897F /* UINavigationItem+EmptyBack.swift in Sources */,
 				0FFD50232717804400F9563B /* DemandableSubscriber.swift in Sources */,
 				0F704E0D270F9D08004B897F /* SceneDelegate.swift in Sources */,
+				0F0F0A672828FE59008C3EFE /* AuthenticationState.swift in Sources */,
 				0FFD502E2717854300F9563B /* HomeView.swift in Sources */,
 				0F47E5032828000D00406546 /* NavigationTopView.swift in Sources */,
 				0FFD503D2717A5CE00F9563B /* HomeTableViewCell.swift in Sources */,
@@ -812,12 +852,14 @@
 				0F704E6E270FAAF4004B897F /* MainCoordinator.swift in Sources */,
 				0F3378652826C95C0007D95A /* ResetPasswordCoordinator.swift in Sources */,
 				0F704E58270FA3D1004B897F /* KeyboardAwareScrollView.swift in Sources */,
+				0F0F0A692828FE6B008C3EFE /* AccountManager.swift in Sources */,
 				0FFD50212717801400F9563B /* TakeUntil.swift in Sources */,
 				0F704E61270FA4B0004B897F /* FloatingLabelField.swift in Sources */,
 				0F704E5C270FA3FF004B897F /* UIScrollView+KeyboardAwareness.swift in Sources */,
 				0F704E5E270FA41A004B897F /* KeyboardAwareScrollContainerView.swift in Sources */,
 				0FFD501A27177F4E00F9563B /* BaseViewController.swift in Sources */,
 				0FFD50302717870800F9563B /* HomeCoordinator.swift in Sources */,
+				0F0F0A612828FCD4008C3EFE /* DependencyContainer.swift in Sources */,
 				0F3378632826C9560007D95A /* ResetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1124,6 +1166,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0F0A1F36284CF116001AFEF4 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FBB52FF282712BE008FDB4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		0F0A1F38284CF116001AFEF4 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FBB52FF282712BE008FDB4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
 		0F48A0562828258C0090AAEE /* FirebaseAnalyticsWithoutAdIdSupport */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0FBB52FF282712BE008FDB4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

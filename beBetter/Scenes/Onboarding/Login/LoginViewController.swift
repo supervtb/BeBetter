@@ -55,21 +55,23 @@ final class LoginViewController: BaseViewController, CustomLoadedController {
 
         // Handle login button action
         _view.onLogin = {
-            self.loginSuccess()
-                .subscribe(self.stepSubject)
-                .store(in: &self.bag)
+            viewModel.doLogin()
         }
+
+        // Handle login success
+        viewModel.isSuccess.sink { _ in
+            self.stepSubject.send(.loggedIn)
+        }.store(in: &bag)
+
+        // Handle login error
+        viewModel.isError.sink { _ in
+            print("User can not login")
+        }.store(in: &bag)
 
         // Handle signup button action
         _view.onSignUp = {
             self.stepSubject.send(.signUp)
         }
-    }
-
-    private func loginSuccess() -> AnyPublisher<Step, Never> {
-        Just(.loggedIn)
-            .delay(for: .seconds(1), scheduler: RunLoop.main)
-            .eraseToAnyPublisher()
     }
 
     private func setupForgotPasswordButton() {
