@@ -56,15 +56,19 @@ final class SignUpViewController: BaseViewController, CustomLoadedController {
             self._view.signUpButton.isEnabled = val
         }.store(in: &bag)
 
+        // Handle sign up action
         _view.onSignUp = {
-            self.signUpSuccess()
-                .subscribe(self.stepSubject)
-                .store(in: &self.bag)
+            viewModel.doSignUp()
         }
-    }
 
-    private func signUpSuccess() -> AnyPublisher<Step, Never> {
-        Just(.signUpEnded)
-            .eraseToAnyPublisher()
+        // Handle sign up success
+        viewModel.isSuccess.sink { _ in
+            self.stepSubject.send(.signUpEnded)
+        }.store(in: &bag)
+
+        // Handle sign up error
+        viewModel.isError.sink { error in
+            print(error)
+        }.store(in: &bag)
     }
 }
