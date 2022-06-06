@@ -112,6 +112,8 @@ public extension UIColor {
 
         case robinSEggBlue
 
+        case alertBackground
+
     }
 
 

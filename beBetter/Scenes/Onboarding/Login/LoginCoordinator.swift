@@ -34,6 +34,19 @@ final class LoginCoordinator: BaseCoordinator<Void> {
             .sink(receiveValue: { _ in })
             .store(in: &bag)
 
+
+        viewController.stepSubject
+            .filter { $0 == .alert(BeBetterAlertConfiguration.loginError()) }
+            .sink(receiveValue: { val in
+                switch val {
+                case .alert(let alert):
+                    self.showError(config: alert)
+                default: return
+                }
+            })
+            .store(in: &bag)
+
+
         return viewController.stepSubject.filter { $0 == .loggedIn }
             .map { _ in () }
             .eraseToAnyPublisher()
@@ -47,5 +60,11 @@ final class LoginCoordinator: BaseCoordinator<Void> {
     private func startResetPassword() -> AnyPublisher<Step, Never> {
         let coordinator = ResetPasswordCoordinator(presenting: NavigationController())
         return present(to: coordinator)
+    }
+
+    private func showError(config: AlertConfiguration<DefaultAlertAction>) {
+        let controller = AlertViewController(configuration: config)
+        viewController.present(controller, animated: true)
+
     }
 }
