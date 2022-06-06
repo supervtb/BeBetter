@@ -22,7 +22,22 @@ final class SignUpCoordinator: BaseCoordinator<Step> {
     }
 
     override func start() -> AnyPublisher<Step, Never> {
+        viewController.stepSubject
+            .filter { $0 == .alert(BeBetterAlertConfiguration.loginError()) }
+            .sink(receiveValue: { val in
+                switch val {
+                case .alert(let alert):
+                    self.showError(config: alert)
+                default: return
+                }
+            })
+            .store(in: &bag)
         let dismiss = viewController.stepSubject.filter { $0 == .signUpEnded || $0 == .signUpCanceled }
         return dismiss.eraseToAnyPublisher()
+    }
+
+    private func showError(config: AlertConfiguration<DefaultAlertAction>) {
+        let controller = AlertViewController(configuration: config)
+        viewController.present(controller, animated: true)
     }
 }

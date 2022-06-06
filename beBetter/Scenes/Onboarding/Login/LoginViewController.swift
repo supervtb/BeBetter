@@ -65,7 +65,7 @@ final class LoginViewController: BaseViewController, CustomLoadedController {
 
         // Handle login error
         viewModel.isError.sink { errorMessage in
-            print(errorMessage)
+            self.stepSubject.send(.alert(BeBetterAlertConfiguration.loginError(errorMessage)))
         }.store(in: &bag)
 
         // Handle signup button action
