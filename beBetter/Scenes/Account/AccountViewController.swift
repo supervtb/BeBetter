@@ -18,14 +18,14 @@ final class AccountViewController: BaseViewController, CustomLoadedController {
     private lazy var logoutButton: UIBarButtonItem = {
         let button = UIBarButtonItem(title: "Logout",
                                      image: nil, primaryAction: UIAction(handler: { [unowned self] _ in
-            self.logoutSubject.send(true)
+            self.logoutDidTap()
         }))
         return button
     }()
 
-    public init(tab: Tab) {
+    public init(tab: Tab, viewModel: BaseViewModel) {
         self.tab = tab
-        super.init()
+        super.init(viewModel: viewModel)
     }
 
     required public init?(coder: NSCoder) {
@@ -39,10 +39,26 @@ final class AccountViewController: BaseViewController, CustomLoadedController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = logoutButton
+
+        guard let viewModel = viewModel as? AccountViewModel else {
+            fatalError()
+        }
+
+        viewModel.didLogout.sink { _ in
+            self.logoutSubject.send(true)
+        }.store(in: &bag)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         title = tab.title
+    }
+
+    func logoutDidTap() {
+        guard let viewModel = viewModel as? AccountViewModel else {
+            fatalError()
+        }
+
+        viewModel.handleLogoutAction.send()
     }
 }

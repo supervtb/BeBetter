@@ -4,7 +4,10 @@ import Combine
 final class SignUpCoordinator: BaseCoordinator<Step> {
 
     lazy var viewController = { () -> SignUpViewController in
-        let model = SignUpViewModel(accountProvider: dependencies.accountManager)
+        let model = SignUpViewModel(
+            accountProvider: dependencies.accountManager,
+            userDefaultsProvider: dependencies.userDefaultsManager
+        )
         return SignUpViewController(viewModel: model)
     }()
 

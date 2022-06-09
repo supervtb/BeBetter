@@ -5,7 +5,9 @@ import FirebaseAuthCombineSwift
 
 final class LoginViewModel: BaseViewModel {
 
-    let accountManagerProvider: AccountManagerType
+    private let accountManagerProvider: AccountManagerType
+
+    private let userDefaultsProvider: UserDefaultsManager
 
     private(set) var email = CurrentValueSubject<String, Never>("")
 
@@ -34,8 +36,9 @@ final class LoginViewModel: BaseViewModel {
         .eraseToAnyPublisher()
     }
 
-    init(accountProvider: AccountManagerType) {
+    init(accountProvider: AccountManagerType, userDefaultsProvider: UserDefaultsManager ) {
         self.accountManagerProvider = accountProvider
+        self.userDefaultsProvider = userDefaultsProvider
         super.init()
         self.setObservers()
 
@@ -46,7 +49,8 @@ final class LoginViewModel: BaseViewModel {
             switch state {
             case .none(let error):
                 self.isError.send(error)
-            default:
+            case .user(_):
+                self.userDefaultsProvider.updateLoginState(isLogged: true)
                 self.isSuccess.send()
             }
         }.store(in: &bag)

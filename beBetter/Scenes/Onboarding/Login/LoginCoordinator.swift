@@ -4,7 +4,10 @@ import Combine
 final class LoginCoordinator: BaseCoordinator<Void> {
 
     lazy var viewController = { () -> LoginViewController in
-        let model = LoginViewModel(accountProvider: dependencies.accountManager)
+        let model = LoginViewModel(
+            accountProvider: dependencies.accountManager,
+            userDefaultsProvider: dependencies.userDefaultsManager
+        )
         return LoginViewController(viewModel: model)
     }()
 
