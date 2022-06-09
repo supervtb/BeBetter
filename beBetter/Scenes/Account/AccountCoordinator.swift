@@ -5,7 +5,11 @@ import Combine
 final class AccountCoordinator: BaseCoordinator<Void> {
 
     private lazy var viewController: AccountViewController = {
-        let viewController = AccountViewController(tab: tab)
+        let model = AccountViewModel(
+            accountProvider: dependencies.accountManager,
+            userDefaultsProvider: dependencies.userDefaultsManager
+        )
+        let viewController = AccountViewController(tab: tab, viewModel: model)
         return viewController
     }()
 

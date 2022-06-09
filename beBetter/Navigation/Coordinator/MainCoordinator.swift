@@ -12,7 +12,12 @@ class MainCoordinator: BaseCoordinator<Void> {
 
     override func start() -> AnyPublisher<Void, Never> {
 
-        startSplash()
+        // check login state
+        if dependencies.userDefaultsManager.isLogged.value == true {
+            startTabBar()
+        } else {
+            startSplash()
+        }
 
         return Publishers.Never()
             .eraseToAnyPublisher()

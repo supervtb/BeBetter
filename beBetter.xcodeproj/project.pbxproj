@@ -33,6 +33,7 @@
 		0F0F0A672828FE59008C3EFE /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0F0A662828FE59008C3EFE /* AuthenticationState.swift */; };
 		0F0F0A692828FE6B008C3EFE /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0F0A682828FE6B008C3EFE /* AccountManager.swift */; };
 		0F0F0A6B2828FE88008C3EFE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0F0A6A2828FE88008C3EFE /* User.swift */; };
+		0F2C83522852555300F520D0 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2C83512852555300F520D0 /* UserDefaultsManager.swift */; };
 		0F3378612826C94F0007D95A /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3378602826C94F0007D95A /* ResetPasswordView.swift */; };
 		0F3378632826C9560007D95A /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3378622826C9560007D95A /* ResetPasswordViewController.swift */; };
 		0F3378652826C95C0007D95A /* ResetPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3378642826C95C0007D95A /* ResetPasswordCoordinator.swift */; };
@@ -95,6 +96,7 @@
 		0F92DD42282831F00075A6E2 /* Gilroy-UltraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F92DD2E282831F00075A6E2 /* Gilroy-UltraLightItalic.otf */; };
 		0F92DD44282836F00075A6E2 /* UIFont+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F92DD43282836F00075A6E2 /* UIFont+Name.swift */; };
 		0FB70B7A2811A26100DFA48B /* ExportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FB70B792811A26100DFA48B /* ExportOptions.plist */; };
+		0FE403252852637A00A10C36 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE403242852637A00A10C36 /* AccountViewModel.swift */; };
 		0FFD501027177E4B00F9563B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD500F27177E4B00F9563B /* Router.swift */; };
 		0FFD501227177EA900F9563B /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD501127177EA900F9563B /* RouterProtocol.swift */; };
 		0FFD501427177ECD00F9563B /* RoutableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD501327177ECD00F9563B /* RoutableProtocol.swift */; };
@@ -153,6 +155,7 @@
 		0F0F0A662828FE59008C3EFE /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
 		0F0F0A682828FE6B008C3EFE /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		0F0F0A6A2828FE88008C3EFE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0F2C83512852555300F520D0 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		0F3378602826C94F0007D95A /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		0F3378622826C9560007D95A /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		0F3378642826C95C0007D95A /* ResetPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordCoordinator.swift; sourceTree = "<group>"; };
@@ -219,6 +222,7 @@
 		0F92DD2E282831F00075A6E2 /* Gilroy-UltraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-UltraLightItalic.otf"; sourceTree = "<group>"; };
 		0F92DD43282836F00075A6E2 /* UIFont+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Name.swift"; sourceTree = "<group>"; };
 		0FB70B792811A26100DFA48B /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
+		0FE403242852637A00A10C36 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		0FFD500F27177E4B00F9563B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0FFD501127177EA900F9563B /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		0FFD501327177ECD00F9563B /* RoutableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutableProtocol.swift; sourceTree = "<group>"; };
@@ -319,6 +323,7 @@
 		0F0F0A642828FE3F008C3EFE /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				0F2C8350285254F700F520D0 /* UserDefaultsManager */,
 				0F0F0A652828FE4A008C3EFE /* AccountManager */,
 			);
 			path = Repository;
@@ -332,6 +337,14 @@
 				0F0F0A6A2828FE88008C3EFE /* User.swift */,
 			);
 			path = AccountManager;
+			sourceTree = "<group>";
+		};
+		0F2C8350285254F700F520D0 /* UserDefaultsManager */ = {
+			isa = PBXGroup;
+			children = (
+				0F2C83512852555300F520D0 /* UserDefaultsManager.swift */,
+			);
+			path = UserDefaultsManager;
 			sourceTree = "<group>";
 		};
 		0F33785F2826C9360007D95A /* ResetPassword */ = {
@@ -697,6 +710,7 @@
 				0FFD5033271789CE00F9563B /* AccountViewController.swift */,
 				0FFD5035271789D800F9563B /* AccountView.swift */,
 				0FFD5037271789E500F9563B /* AccountCoordinator.swift */,
+				0FE403242852637A00A10C36 /* AccountViewModel.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -876,6 +890,7 @@
 				0F0A1F43284D1FCF001AFEF4 /* AlertAction.swift in Sources */,
 				0FFD5034271789CE00F9563B /* AccountViewController.swift in Sources */,
 				0F3378612826C94F0007D95A /* ResetPasswordView.swift in Sources */,
+				0F2C83522852555300F520D0 /* UserDefaultsManager.swift in Sources */,
 				0F92DD44282836F00075A6E2 /* UIFont+Name.swift in Sources */,
 				0F07C3102827E93B00C18EE2 /* ResetPasswordViewModel.swift in Sources */,
 				0F704E0B270F9D08004B897F /* AppDelegate.swift in Sources */,
@@ -891,6 +906,7 @@
 				0F704E78270FC6A0004B897F /* AuthorizationBaseView.swift in Sources */,
 				0F704E5A270FA3ED004B897F /* KeyboardAwareTableView.swift in Sources */,
 				0FFD501827177F2300F9563B /* ReleaseHandler.swift in Sources */,
+				0FE403252852637A00A10C36 /* AccountViewModel.swift in Sources */,
 				0F0A1F47284D2023001AFEF4 /* AlertConfiguration+BeBetterStyle.swift in Sources */,
 				0F704E65270FA4F4004B897F /* BeBetterTextField.swift in Sources */,
 				0FFD501427177ECD00F9563B /* RoutableProtocol.swift in Sources */,
