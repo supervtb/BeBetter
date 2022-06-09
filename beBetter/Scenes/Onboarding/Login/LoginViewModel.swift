@@ -17,6 +17,8 @@ final class LoginViewModel: BaseViewModel {
     
     let isError = PassthroughSubject<String, Never>()
 
+    let isNetworkLoading = CurrentValueSubject<Bool, Never>(false)
+
     private var isEmailValidPublisher: AnyPublisher<Bool, Never> {
         email
             .map { !$0.isEmpty }
@@ -45,18 +47,20 @@ final class LoginViewModel: BaseViewModel {
     }
 
     private func setObservers() {
-        accountManagerProvider.authenticationState.sink { _ in } receiveValue: { state in
+        accountManagerProvider.authenticationState.sink { _ in } receiveValue: { [weak self] state in
+            self?.isNetworkLoading.send(false)
             switch state {
             case .none(let error):
-                self.isError.send(error)
+                self?.isError.send(error)
             case .user(_):
-                self.userDefaultsProvider.updateLoginState(isLogged: true)
-                self.isSuccess.send()
+                self?.userDefaultsProvider.updateLoginState(isLogged: true)
+                self?.isSuccess.send()
             }
         }.store(in: &bag)
     }
 
     func doLogin() {
+        isNetworkLoading.send(true)
         accountManagerProvider.doSignIn(email: email.value, password: password.value)
     }
 }

@@ -53,6 +53,11 @@ final class LoginViewController: BaseViewController, CustomLoadedController {
             self._view.loginButton.isEnabled = val
         }.store(in: &bag)
 
+        // Subscribe to request status and update login button state
+        viewModel.isNetworkLoading.sink { isLoading in
+            self._view.loginButton.isEnabled = !isLoading
+        }.store(in: &bag)
+
         // Handle login button action
         _view.onLogin = {
             viewModel.doLogin()
