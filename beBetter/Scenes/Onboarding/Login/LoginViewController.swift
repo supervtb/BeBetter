@@ -23,6 +23,18 @@ final class LoginViewController: BaseViewController, CustomLoadedController {
         return button
     }()
 
+    lazy var isLoginButtonEnabled: AnyPublisher<Bool, Never>? = {
+        guard let viewModel = self.viewModel as? LoginViewModel else {
+            return nil
+        }
+
+        return Publishers.CombineLatest(viewModel.isNetworkLoading, viewModel.isLoginValidPublisher)
+            .map { requestProcessing, isLoginFormValid in
+                return !requestProcessing && isLoginFormValid
+            }
+            .eraseToAnyPublisher()
+    }()
+
     override func loadView() {
         view = LoginView()
     }
@@ -49,14 +61,9 @@ final class LoginViewController: BaseViewController, CustomLoadedController {
         }.store(in: &bag)
 
         // Subscribe to validation property and update login button state
-        viewModel.isLoginValidPublisher.sink { val in
+        isLoginButtonEnabled?.sink(receiveValue: { val in
             self._view.loginButton.isEnabled = val
-        }.store(in: &bag)
-
-        // Subscribe to request status and update login button state
-        viewModel.isNetworkLoading.sink { isLoading in
-            self._view.loginButton.isEnabled = !isLoading
-        }.store(in: &bag)
+        }).store(in: &bag)
 
         // Handle login button action
         _view.onLogin = {
