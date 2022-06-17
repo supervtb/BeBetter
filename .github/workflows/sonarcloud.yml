@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   Analysis:
-    runs-on: macos-latest
+    runs-on: linux-latest
     
     steps:
       - name: Analyze with SonarCloud         
