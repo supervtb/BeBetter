@@ -51,19 +51,23 @@ final class LoginViewController: BaseViewController, CustomLoadedController {
         _view.loginButton.isEnabled = false
 
         // Bind email string to model
-        _view.emailTextField.textField.textPublisher.sink { val in
-            viewModel.email.send(val)
-        }.store(in: &bag)
+        _view.emailTextField
+            .textField
+            .textPublisher
+            .assign(to: \.value, on: viewModel.email)
+            .store(in: &bag)
 
         // Bind password string to model
-        _view.passwordTextField.textField.textPublisher.sink { val in
-            viewModel.password.send(val)
-        }.store(in: &bag)
+        _view.passwordTextField
+            .textField
+            .textPublisher
+            .assign(to: \.value, on: viewModel.password)
+            .store(in: &bag)
 
         // Subscribe to validation property and update login button state
-        isLoginButtonEnabled?.sink(receiveValue: { val in
-            self._view.loginButton.isEnabled = val
-        }).store(in: &bag)
+        isLoginButtonEnabled?
+            .assign(to: \.isEnabled, on: self._view.loginButton)
+            .store(in: &bag)
 
         // Handle login button action
         _view.onLogin = {

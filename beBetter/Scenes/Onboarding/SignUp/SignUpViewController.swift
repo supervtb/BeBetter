@@ -37,24 +37,30 @@ final class SignUpViewController: BaseViewController, CustomLoadedController {
         _view.signUpButton.isEnabled = false
 
         // Bind email string to model
-        _view.emailTextField.textField.textPublisher.sink { val in
-            viewModel.email.send(val)
-        }.store(in: &bag)
+        _view.emailTextField
+            .textField
+            .textPublisher
+            .assign(to: \.value, on: viewModel.email)
+            .store(in: &bag)
 
         // Bind password string to model
-        _view.passwordTextField.textField.textPublisher.sink { val in
-            viewModel.password.send(val)
-        }.store(in: &bag)
+        _view.passwordTextField
+            .textField
+            .textPublisher
+            .assign(to: \.value, on: viewModel.password)
+            .store(in: &bag)
 
         // Bind confirm password string to model
-        _view.confirmPasswordTextField.textField.textPublisher.sink { val in
-            viewModel.confirmPassword.send(val)
-        }.store(in: &bag)
+        _view.confirmPasswordTextField
+            .textField
+            .textPublisher
+            .assign(to: \.value, on: viewModel.confirmPassword)
+            .store(in: &bag)
 
         // Subscribe to validation property and update signup button state
-        viewModel.isSignUpValidPublisher.sink { val in
-            self._view.signUpButton.isEnabled = val
-        }.store(in: &bag)
+        viewModel.isSignUpValidPublisher
+            .assign(to: \.isEnabled, on: _view.signUpButton)
+            .store(in: &bag)
 
         // Handle sign up action
         _view.onSignUp = {
